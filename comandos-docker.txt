@@ -1,0 +1,27 @@
+# Rodar container psql
+docker run --name librarydb -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=library -p 5432:5432 postgres:16.3
+
+#Rodar pgadmin4
+docker run --name pgadmin4 -p 15432:80 -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=admin dpage/pgadmin4
+
+# Comando docker para listar container CMD
+docker ps
+
+# Comando para parar o container
+docker stop librarydb
+
+# Comando para iniciar o container
+docker start librarydb
+
+# Comando para mostrar todos containers
+docker ps -a
+
+# Comando para deletar um container
+docker container rm librarydb
+
+# Comando para criar network no docker
+docker  network create library-network
+
+#Comando para subir container com network
+docker run --name librarydb -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=library -p 5432:5432 --network library-network postgres:16.3
+docker run --name pgadmin4 -p 15432:80 -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=admin --network library-network dpage/pgadmin4
