@@ -1,7 +1,6 @@
-package oi.githubkaiocandido.libraryapi.repoitory;
+package oi.githubkaiocandido.libraryapi.repository;
 
 import oi.githubkaiocandido.libraryapi.model.Autor;
-import oi.githubkaiocandido.libraryapi.repository.AutorRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,7 +11,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @SpringBootTest
-public class AutorRepositoryTest {
+class AutorRepositoryTest {
 
     @Autowired
     AutorRepository repository;
@@ -20,7 +19,7 @@ public class AutorRepositoryTest {
     @Test
     public void salvarTest(){
         Autor autor = new Autor();
-        autor.setNome("Kaio");
+        autor.setNome("Maria");
         autor.setNascionalidade("Brasileira");
         autor.setDataNascimento(LocalDate.of(2001, 01, 27));
 
