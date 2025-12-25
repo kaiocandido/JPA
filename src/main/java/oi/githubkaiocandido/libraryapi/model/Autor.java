@@ -19,7 +19,6 @@ import java.util.UUID;
 @Table(name = "autor", schema = "public")
 @Getter
 @Setter
-@ToString
 public class Autor {
 
     @Id
@@ -44,4 +43,13 @@ public class Autor {
 
     }
 
+    @Override
+    public String toString() {
+        return "Autor{" +
+                "nascionalidade='" + nascionalidade + '\'' +
+                ", dataNascimento=" + dataNascimento +
+                ", nome='" + nome + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }
