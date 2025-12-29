@@ -6,6 +6,7 @@ import oi.githubkaiocandido.libraryapi.model.Livro;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -88,19 +89,29 @@ class LivroRepositoryTest {
     }
 
     @Test
-
     public void deletar(){
         UUID id = (UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078"));
 
         livroRepository.deleteById(id);
     }
 
+    @Test
     public void deletarCascade(){
         UUID id = (UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078"));
 
         livroRepository.deleteById(id);
     }
 
+    @Test
+    //@Transactional
+    public void buscarLivroTest(){
+        UUID  id =  (UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078"));
+        Livro livro = livroRepository.findById(id).orElse(null);
+        System.out.println("Livro:");
+        System.out.println(livro.getTitulo());
+        System.out.println("Autor:");
+        System.out.println(livro.getId_autor().getNome());
 
+    }
 
 }
