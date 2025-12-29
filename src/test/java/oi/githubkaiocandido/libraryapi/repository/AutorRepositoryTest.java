@@ -6,6 +6,7 @@ import oi.githubkaiocandido.libraryapi.model.Livro;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -99,7 +100,20 @@ class AutorRepositoryTest {
         repository.save(autor);
         //usando o cascade não precisa salvar os livros
         //livroRepository.saveAll(autor.getLivros());
+    }
 
+    @Test
+    //@Transactional
+    public void mostrarLivrosAutor(){
+        var id = UUID.fromString("ec1f49d7-5ac9-4a77-a128-2d645cb847a4");
+        var autor = repository.findById(id).orElse(null);
+
+        //Buscar os livros do autor
+        List<Livro> listaLivros = livroRepository.findByAutor(autor);
+        autor.setLivros(listaLivros);
+
+
+        autor.getLivros().forEach(System.out::println);
 
     }
 
