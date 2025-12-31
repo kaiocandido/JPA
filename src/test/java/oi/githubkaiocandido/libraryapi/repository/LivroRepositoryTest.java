@@ -163,4 +163,29 @@ class LivroRepositoryTest {
         List<Livro> livrosIgnoreCase = livroRepository.findByTituloIgnoreCase("");
         livrosIgnoreCase.forEach(System.out::println);
     }
+
+    //Usando JPQL
+    @Test
+    public void ListarLivros(){
+        var livrosResultado = livroRepository.listarTodosOrdenadoPorTituloAndPreco();
+        livrosResultado.forEach(System.out::println);
+    }
+
+    @Test
+    public void ListarAutorLivros(){
+        var livrosResultado = livroRepository.listarAutoresDosLivros();
+        livrosResultado.forEach(System.out::println);
+    }
+
+    @Test
+    public void ListarTitulosLivros(){
+        var livrosResultado = livroRepository.listarNomesLivros();
+        livrosResultado.forEach(System.out::println);
+    }
+
+    @Test
+    public void ListarGenerosBrasileiros(){
+        var livrosResultado = livroRepository.listarGenerosAutorBrasileiros();
+        livrosResultado.forEach(System.out::println);
+    }
 }
