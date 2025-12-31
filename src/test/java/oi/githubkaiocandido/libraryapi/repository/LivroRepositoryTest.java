@@ -188,4 +188,16 @@ class LivroRepositoryTest {
         var livrosResultado = livroRepository.listarGenerosAutorBrasileiros();
         livrosResultado.forEach(System.out::println);
     }
+
+    @Test
+    public void ListarOGeneroQueryParam(){
+        var resultado = livroRepository.findByGenero(Generos.CIENCIA, "dataPublicacao");
+    }
+
+    @Test
+    public void ListarOGeneroQueryParamPositional(){
+        var resultado = livroRepository.findByGeneroPositional(Generos.CIENCIA, "dataPublicacao");
+    }
+
 }
+
