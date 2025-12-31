@@ -199,5 +199,14 @@ class LivroRepositoryTest {
         var resultado = livroRepository.findByGeneroPositional(Generos.CIENCIA, "dataPublicacao");
     }
 
+    @Test
+    public void deleteGeneros(){
+        livroRepository.deleteByGenero(Generos.CIENCIA);
+    }
+
+    @Test
+    public void updateGeneros(){
+        livroRepository.updateDataPublicacao(LocalDate.of(1190, 10, 27));
+    }
 }
 
