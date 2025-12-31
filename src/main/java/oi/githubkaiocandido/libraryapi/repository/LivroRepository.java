@@ -35,4 +35,6 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
     //Ordenar livros pelo titulo
     List<Livro> findByTituluOrIsbnOrdeByTitulo(String titulo, String isbn);
 
+    //buscar por livro com ignoreCase
+    List<Livro> findByTituloIgnoreCase(String titulo);
 }

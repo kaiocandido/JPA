@@ -157,4 +157,10 @@ class LivroRepositoryTest {
         List<Livro> livrosOrdenados = livroRepository.findByTituluOrIsbnOrdeByTitulo("", "");
         livrosOrdenados.forEach(System.out::println);
     }
+
+    @Test
+    public void pesquisarPorTituloQualquer(){
+        List<Livro> livrosIgnoreCase = livroRepository.findByTituloIgnoreCase("");
+        livrosIgnoreCase.forEach(System.out::println);
+    }
 }
