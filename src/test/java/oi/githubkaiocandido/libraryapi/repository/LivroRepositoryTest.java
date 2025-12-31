@@ -139,4 +139,22 @@ class LivroRepositoryTest {
         List<Livro> byTituloOrIsbn = livroRepository.findByTituloOrIsbn("", "");
         byTituloOrIsbn.forEach(System.out::println);
     }
+
+    @Test
+    public void pesquisarPorDataInicioAndFim(){
+        List<Livro> byInicioAndFimData = livroRepository.findByDataPublicacaoBetween(LocalDate.of(1990, 1 , 10), LocalDate.of(2004, 1 , 10));
+        byInicioAndFimData.forEach(System.out::println);
+    }
+
+    @Test
+    public void pesquisarPorPalavra(){
+        List<Livro> listPalavras = livroRepository.findByDataTituloLike("Carro");
+        listPalavras.forEach(System.out::println);
+    }
+
+    @Test
+    public void pesquisarPorTituloOuIsbnAndOrdenarPorTitulo(){
+        List<Livro> livrosOrdenados = livroRepository.findByTituluOrIsbnOrdeByTitulo("", "");
+        livrosOrdenados.forEach(System.out::println);
+    }
 }
