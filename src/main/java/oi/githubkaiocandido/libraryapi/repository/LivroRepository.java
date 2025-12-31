@@ -4,10 +4,25 @@ import oi.githubkaiocandido.libraryapi.model.Autor;
 import oi.githubkaiocandido.libraryapi.model.Livro;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
 public interface LivroRepository extends JpaRepository<Livro, UUID> {
     //Query methods
     List<Livro> findByAutor(Autor autor);
+
+    //buscar livro por TITULO
+    List<Livro> findByTitulo(String titulo);
+
+
+    //buscar livro por ISBN
+    List<Livro> findByIsbn(String isbn);
+
+    //buscar livro por TITULO e PRECO
+    List<Livro> findByTituloAndPreco(String titulo, BigDecimal preco);
+
+    //buscar livro por TITULO ou ISBN
+    List<Livro> findByTituloOrIsbn(String titulo, String preco);
+
 }
