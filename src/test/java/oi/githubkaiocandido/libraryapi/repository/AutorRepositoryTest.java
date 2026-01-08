@@ -90,8 +90,8 @@ class AutorRepositoryTest {
         livro.setPreco(BigDecimal.valueOf(204));
         livro.setGenero(Generos.BIOGRAFIA);
         livro.setTitulo("Michel Jackson");
-        livro.setData_publicacao(LocalDate.of(1968, 11 , 20));
-        livro.setId_autor(autor);
+        livro.setDataPublicacao(LocalDate.of(1968, 11 , 20));
+        livro.setAutor(autor);
 
         autor.setLivros(new ArrayList<>());
         autor.getLivros().add(livro);

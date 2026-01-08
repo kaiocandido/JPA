@@ -6,14 +6,11 @@ import oi.githubkaiocandido.libraryapi.model.Livro;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class LivroRepositoryTest {
@@ -31,10 +28,12 @@ class LivroRepositoryTest {
         livro.setPreco(BigDecimal.valueOf(200));
         livro.setGenero(Generos.CIENCIA);
         livro.setTitulo("Doidos");
-        livro.setData_publicacao(LocalDate.of(1990, 1 , 10));
+        livro.setDataPublicacao(LocalDate.of(1990, 1 , 10));
 
-        Autor autor = autorRepository.findById(UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078")).orElse(null);
-        livro.setId_autor(autor);
+        Autor autor = autorRepository.findById(UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078"))
+                .orElseThrow(() -> new RuntimeException("Autor não encontrado"));
+
+        livro.setAutor(autor);
 
         livroRepository.save(livro);
     }
@@ -46,167 +45,109 @@ class LivroRepositoryTest {
         livro.setPreco(BigDecimal.valueOf(200));
         livro.setGenero(Generos.CIENCIA);
         livro.setTitulo("outro livro");
-        livro.setData_publicacao(LocalDate.of(1990, 1 , 10));
+        livro.setDataPublicacao(LocalDate.of(1990, 1 , 10));
 
         Autor autor = new Autor();
-
         autor.setNome("Joana");
         autor.setNascionalidade("Brasileira");
-        autor.setDataNascimento(LocalDate.of(2002, 01, 27));
+        autor.setDataNascimento(LocalDate.of(2002, 1, 27));
 
         autorRepository.save(autor);
-        livro.setId_autor(autor);
-        livroRepository.save(livro);
-    }
 
-    @Test
-    public void salvarCascadeTest(){
-        Livro livro = new Livro();
-        livro.setIsbn("6444446354");
-        livro.setPreco(BigDecimal.valueOf(200));
-        livro.setGenero(Generos.CIENCIA);
-        livro.setTitulo("outro livro");
-        livro.setData_publicacao(LocalDate.of(1990, 1 , 10));
-
-        Autor autor = new Autor();
-
-        autor.setNome("Joana");
-        autor.setNascionalidade("Brasileira");
-        autor.setDataNascimento(LocalDate.of(2002, 01, 27));
-
-        livro.setId_autor(autor);
+        livro.setAutor(autor);
         livroRepository.save(livro);
     }
 
     @Test
     public void atualizarAutorLivro(){
-         var livroParaAtt = livroRepository.findById(UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078")).orElse(null);
+        UUID livroId = UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078");
+        UUID autorId = UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078");
 
-         Autor maria = autorRepository.findById(UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078")).orElse(null);
+        Livro livroParaAtt = livroRepository.findById(livroId)
+                .orElseThrow(() -> new RuntimeException("Livro não encontrado"));
 
-        livroParaAtt.setId_autor(maria);
+        Autor autor = autorRepository.findById(autorId)
+                .orElseThrow(() -> new RuntimeException("Autor não encontrado"));
+
+        livroParaAtt.setAutor(autor);
         livroRepository.save(livroParaAtt);
-
     }
 
     @Test
-    public void deletar(){
-        UUID id = (UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078"));
-
-        livroRepository.deleteById(id);
-    }
-
-    @Test
-    public void deletarCascade(){
-        UUID id = (UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078"));
-
-        livroRepository.deleteById(id);
-    }
-
-    @Test
-    //@Transactional
     public void buscarLivroTest(){
-        UUID  id =  (UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078"));
+        UUID id = UUID.fromString("edea5550-b839-4a17-9646-3568b87f8078");
         Livro livro = livroRepository.findById(id).orElse(null);
+
+        if (livro == null) return;
+
         System.out.println("Livro:");
         System.out.println(livro.getTitulo());
         System.out.println("Autor:");
-        System.out.println(livro.getId_autor().getNome());
-
+        System.out.println(livro.getAutor().getNome());
     }
-
 
     @Test
     public void pesquisaPorTituloTest(){
-        List<Livro> byTitulo = livroRepository.findByTitulo("");
+        List<Livro> byTitulo = livroRepository.findByTitulo("Doidos");
         byTitulo.forEach(System.out::println);
     }
 
     @Test
-    public void pesquisarPorIsnbTest(){
-        List<Livro> byIsbn = livroRepository.findByIsbn("");
+    public void pesquisarPorIsbnTest(){
+        List<Livro> byIsbn = livroRepository.findByIsbn("6444446354");
         byIsbn.forEach(System.out::println);
     }
 
     @Test
     public void pesquisaPorTituloAndPrecoTest(){
-        List<Livro> byTituloAndPreco = livroRepository.findByTituloAndPreco("", BigDecimal.valueOf(158.10));
+        List<Livro> byTituloAndPreco = livroRepository.findByTituloAndPreco("Doidos", BigDecimal.valueOf(200));
         byTituloAndPreco.forEach(System.out::println);
     }
 
     @Test
-    public void pesquisarPorTituloOrIsnb(){
-        List<Livro> byTituloOrIsbn = livroRepository.findByTituloOrIsbn("", "");
+    public void pesquisarPorTituloOrIsbn(){
+        List<Livro> byTituloOrIsbn = livroRepository.findByTituloOrIsbn("Doidos", "6444446354");
         byTituloOrIsbn.forEach(System.out::println);
     }
 
     @Test
     public void pesquisarPorDataInicioAndFim(){
-        List<Livro> byInicioAndFimData = livroRepository.findByDataPublicacaoBetween(LocalDate.of(1990, 1 , 10), LocalDate.of(2004, 1 , 10));
+        List<Livro> byInicioAndFimData = livroRepository.findByDataPublicacaoBetween(
+                LocalDate.of(1990, 1 , 10),
+                LocalDate.of(2004, 1 , 10)
+        );
         byInicioAndFimData.forEach(System.out::println);
     }
 
     @Test
     public void pesquisarPorPalavra(){
-        List<Livro> listPalavras = livroRepository.findByDataTituloLike("Carro");
+        List<Livro> listPalavras = livroRepository.findByTituloContainingIgnoreCase("carro");
         listPalavras.forEach(System.out::println);
     }
 
     @Test
     public void pesquisarPorTituloOuIsbnAndOrdenarPorTitulo(){
-        List<Livro> livrosOrdenados = livroRepository.findByTituluOrIsbnOrdeByTitulo("", "");
+        List<Livro> livrosOrdenados = livroRepository.findByTituloOrIsbnOrderByTituloAsc("Doidos", "6444446354");
         livrosOrdenados.forEach(System.out::println);
     }
 
+    // JPQL
     @Test
-    public void pesquisarPorTituloQualquer(){
-        List<Livro> livrosIgnoreCase = livroRepository.findByTituloIgnoreCase("");
-        livrosIgnoreCase.forEach(System.out::println);
-    }
-
-    //Usando JPQL
-    @Test
-    public void ListarLivros(){
+    public void listarLivros(){
         var livrosResultado = livroRepository.listarTodosOrdenadoPorTituloAndPreco();
         livrosResultado.forEach(System.out::println);
     }
 
     @Test
-    public void ListarAutorLivros(){
-        var livrosResultado = livroRepository.listarAutoresDosLivros();
-        livrosResultado.forEach(System.out::println);
+    public void listarAutorLivros(){
+        var autores = livroRepository.listarAutoresDosLivros();
+        autores.forEach(System.out::println);
     }
 
-    @Test
-    public void ListarTitulosLivros(){
-        var livrosResultado = livroRepository.listarNomesLivros();
-        livrosResultado.forEach(System.out::println);
-    }
 
     @Test
-    public void ListarGenerosBrasileiros(){
-        var livrosResultado = livroRepository.listarGenerosAutorBrasileiros();
-        livrosResultado.forEach(System.out::println);
-    }
-
-    @Test
-    public void ListarOGeneroQueryParam(){
-        var resultado = livroRepository.findByGenero(Generos.CIENCIA, "dataPublicacao");
-    }
-
-    @Test
-    public void ListarOGeneroQueryParamPositional(){
-        var resultado = livroRepository.findByGeneroPositional(Generos.CIENCIA, "dataPublicacao");
-    }
-
-    @Test
-    public void deleteGeneros(){
-        livroRepository.deleteByGenero(Generos.CIENCIA);
-    }
-
-    @Test
-    public void updateGeneros(){
-        livroRepository.updateDataPublicacao(LocalDate.of(1190, 10, 27));
+    public void listarGenerosBrasileiros(){
+        var generos = livroRepository.listarGenerosAutorBrasileiros();
+        generos.forEach(System.out::println);
     }
 }
-

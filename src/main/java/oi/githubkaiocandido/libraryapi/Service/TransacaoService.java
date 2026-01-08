@@ -34,9 +34,9 @@ public class TransacaoService {
         livro.setPreco(BigDecimal.valueOf(200));
         livro.setGenero(Generos.CIENCIA);
         livro.setTitulo("outro livro");
-        livro.setData_publicacao(LocalDate.of(1990, 1 , 10));
+        livro.setDataPublicacao(LocalDate.of(1990, 1 , 10));
 
-        livro.setId_autor(autor);
+        livro.setAutor(autor);
         livroRepository.save(livro);
 
         if (autor.getNome().equals("Jose")){
