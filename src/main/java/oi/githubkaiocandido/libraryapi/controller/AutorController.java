@@ -11,12 +11,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/autores") // -> host http:localhost:8080/autores
@@ -60,11 +63,27 @@ public class AutorController {
         var idAutor = UUID.fromString(id);
         Optional<Autor> autor = autorService.obterId(idAutor);
         if (autor.isEmpty()){
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
 
         autorService.deletar(autor.get());
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping
+    public ResponseEntity<List<AutorDTO>> listarAutorDto(
+            @RequestParam(value = "nome", required = false) String nome,
+            @RequestParam(value ="nacionalidade", required = false) String nacionalidade){
+
+        List<Autor> lista = autorService.pesquisar(nome, nacionalidade);
+        List<AutorDTO> list = lista.stream().map(autor -> new AutorDTO(
+                autor.getId(),
+                autor.getNome(),
+                autor.getDataNascimento(),
+                autor.getNascionalidade()
+        )).collect(Collectors.toList());
+
+        return ResponseEntity.ok(list);
+
+    }
 }
