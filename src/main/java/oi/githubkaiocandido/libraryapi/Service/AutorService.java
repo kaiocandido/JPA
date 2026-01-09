@@ -33,11 +33,11 @@ public class AutorService {
 
     public List<Autor> pesquisar(String nome, String nacionalidade){
         if (nome != null && nacionalidade != null){
-            return autorRepository.findByNomeAndNascionalidadeLike(nome, nacionalidade);
+            return autorRepository.findByNomeContainingIgnoreCaseAndNascionalidadeContainingIgnoreCase(nome, nacionalidade);
         }else if (nome != null){
-           return autorRepository.findByNomeLike(nome);
+           return autorRepository.findByNomeContainingIgnoreCase(nome);
         }else if (nacionalidade != null){
-            return autorRepository.findByNascionalidadeLike(nacionalidade);
+            return autorRepository.findByNascionalidadeContainingIgnoreCase(nacionalidade);
         }
 
         return autorRepository.findAll();
