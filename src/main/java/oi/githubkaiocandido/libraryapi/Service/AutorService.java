@@ -26,8 +26,8 @@ public class AutorService {
         return autorRepository.findById(id);
     }
 
-    public void deletar(UUID id){
-        autorRepository.deleteById(id);
+    public void deletar(Autor id){
+        autorRepository.delete(id);
     }
 
 
