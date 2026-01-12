@@ -2,6 +2,7 @@ package oi.githubkaiocandido.libraryapi.Service;
 
 import oi.githubkaiocandido.libraryapi.model.Autor;
 import oi.githubkaiocandido.libraryapi.repository.AutorRepository;
+import oi.githubkaiocandido.libraryapi.validator.AutorValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +16,16 @@ public class AutorService {
     @Autowired
     private AutorRepository autorRepository;
 
-    public AutorService(AutorRepository autorRepository){
+    @Autowired
+    private  AutorValidator validator;
+
+    public AutorService(AutorRepository autorRepository, AutorValidator validator) {
         this.autorRepository = autorRepository;
+        this.validator = validator;
     }
 
     public Autor salvar(Autor autor){
+        validator.validar(autor);
         return autorRepository.save(autor);
     }
 
@@ -44,9 +50,11 @@ public class AutorService {
     }
 
     public void atualizar(Autor autor){
+
         if (autor.getId() == null){
             throw new IllegalArgumentException("Para atualizar é necessario que o autor esteja cadastrado!!");
         }
+        validator.validar(autor);
         autorRepository.save(autor);
     }
 }

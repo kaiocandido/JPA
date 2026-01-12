@@ -1,5 +1,6 @@
 package oi.githubkaiocandido.libraryapi.controller;
 
+import oi.githubkaiocandido.libraryapi.Exceptions.RegistroDuplicadoException;
 import oi.githubkaiocandido.libraryapi.Service.AutorService;
 import oi.githubkaiocandido.libraryapi.controller.dto.AutorDTO;
 import oi.githubkaiocandido.libraryapi.controller.dto.ErroResposta;
@@ -38,14 +39,19 @@ public class AutorController {
 
     @PostMapping
     //@RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Void> salvar(@RequestBody AutorDTO autor){
-        var autorEntidade = autor.mapearParaAutor();
-        autorService.salvar(autorEntidade);
+    public ResponseEntity<Object> salvar(@RequestBody AutorDTO autor){
+        try {
+            var autorEntidade = autor.mapearParaAutor();
+            autorService.salvar(autorEntidade);
 
-        // -> host http:localhost:8080/autores/id
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(autorEntidade.getId()).toUri();
+            // -> host http:localhost:8080/autores/id
+            URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(autorEntidade.getId()).toUri();
 
-        return  ResponseEntity.created(location).build();
+            return  ResponseEntity.created(location).build();
+        }catch (RegistroDuplicadoException e ){
+            var erroDTo = ErroResposta.conflito(e.getMessage());
+            return ResponseEntity.status(erroDTo.status()).body(erroDTo);
+        }
     }
 
     @GetMapping("{id}")
@@ -90,21 +96,28 @@ public class AutorController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<Void> atualizarAutor(@PathVariable("id") String id, @RequestBody AutorDTO dto){
-        var idAutor = UUID.fromString(id);
-        Optional<Autor> autor = autorService.obterId(idAutor);
-        if (autor.isEmpty()){
+    public ResponseEntity<Object> atualizarAutor(@PathVariable("id") String id, @RequestBody AutorDTO dto){
+
+        try {
+            var idAutor = UUID.fromString(id);
+            Optional<Autor> autor = autorService.obterId(idAutor);
+            if (autor.isEmpty()){
+                return ResponseEntity.noContent().build();
+            }
+
+            var autorFinal = autor.get();
+            autorFinal.setNome(dto.nome());
+            autorFinal.setNascionalidade(dto.nascionalidade());
+            autorFinal.setDataNascimento(dto.dataNascimento());
+
+            autorService.atualizar(autorFinal);
+
             return ResponseEntity.noContent().build();
+        }catch (RegistroDuplicadoException e ){
+            var erroDTo = ErroResposta.respostaPadrão(e.getMessage());
+            return ResponseEntity.status(erroDTo.status()).body(erroDTo);
         }
 
-        var autorFinal = autor.get();
-        autorFinal.setNome(dto.nome());
-        autorFinal.setNascionalidade(dto.nacionalidade());
-        autorFinal.setDataNascimento(dto.dataNascimento());
-
-        autorService.atualizar(autorFinal);
-
-        return ResponseEntity.noContent().build();
     }
 }
 
