@@ -1,5 +1,6 @@
 package oi.githubkaiocandido.libraryapi.Service;
 
+import lombok.RequiredArgsConstructor;
 import oi.githubkaiocandido.libraryapi.model.Autor;
 import oi.githubkaiocandido.libraryapi.model.Generos;
 import oi.githubkaiocandido.libraryapi.model.Livro;
@@ -13,8 +14,9 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Service
+@RequiredArgsConstructor
 public class TransacaoService {
-    @Autowired
+
     private AutorRepository autorRepository;
     private LivroRepository livroRepository;
 

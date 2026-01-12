@@ -1,5 +1,6 @@
 package oi.githubkaiocandido.libraryapi.controller;
 
+import lombok.RequiredArgsConstructor;
 import oi.githubkaiocandido.libraryapi.Exceptions.OperacaoNaoPermitidaException;
 import oi.githubkaiocandido.libraryapi.Exceptions.RegistroDuplicadoException;
 import oi.githubkaiocandido.libraryapi.Service.AutorService;
@@ -27,15 +28,11 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/autores") // -> host http:localhost:8080/autores
-
+@RequiredArgsConstructor
 public class AutorController {
 
-    @Autowired
-    private AutorService autorService;
 
-    public AutorController(AutorService autorService){
-        this.autorService = autorService;
-    }
+    private final AutorService autorService;
 
     @PostMapping
     //@RequestMapping(method = RequestMethod.POST)

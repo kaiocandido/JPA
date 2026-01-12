@@ -1,5 +1,6 @@
 package oi.githubkaiocandido.libraryapi.Service;
 
+import lombok.RequiredArgsConstructor;
 import oi.githubkaiocandido.libraryapi.Exceptions.OperacaoNaoPermitidaException;
 import oi.githubkaiocandido.libraryapi.model.Autor;
 import oi.githubkaiocandido.libraryapi.repository.AutorRepository;
@@ -13,22 +14,15 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class AutorService {
 
-    @Autowired
-    private LivroRepository livroRepository;
+    private final LivroRepository livroRepository;
 
-    @Autowired
-    private AutorRepository autorRepository;
+    private final AutorRepository autorRepository;
 
-    @Autowired
-    private  AutorValidator validator;
+    private  final AutorValidator validator;
 
-    public AutorService(LivroRepository livroRepository, AutorRepository autorRepository, AutorValidator validator) {
-        this.livroRepository = livroRepository;
-        this.autorRepository = autorRepository;
-        this.validator = validator;
-    }
 
     public Autor salvar(Autor autor){
         validator.validar(autor);
