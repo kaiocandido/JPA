@@ -2,8 +2,10 @@ package oi.githubkaiocandido.libraryapi.controller;
 
 import oi.githubkaiocandido.libraryapi.Service.AutorService;
 import oi.githubkaiocandido.libraryapi.controller.dto.AutorDTO;
+import oi.githubkaiocandido.libraryapi.controller.dto.ErroResposta;
 import oi.githubkaiocandido.libraryapi.model.Autor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -105,3 +107,4 @@ public class AutorController {
         return ResponseEntity.noContent().build();
     }
 }
+
