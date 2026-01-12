@@ -1,7 +1,9 @@
 package oi.githubkaiocandido.libraryapi.Service;
 
+import oi.githubkaiocandido.libraryapi.Exceptions.OperacaoNaoPermitidaException;
 import oi.githubkaiocandido.libraryapi.model.Autor;
 import oi.githubkaiocandido.libraryapi.repository.AutorRepository;
+import oi.githubkaiocandido.libraryapi.repository.LivroRepository;
 import oi.githubkaiocandido.libraryapi.validator.AutorValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,12 +16,16 @@ import java.util.UUID;
 public class AutorService {
 
     @Autowired
+    LivroRepository livroRepository;
+
+    @Autowired
     private AutorRepository autorRepository;
 
     @Autowired
     private  AutorValidator validator;
 
-    public AutorService(AutorRepository autorRepository, AutorValidator validator) {
+    public AutorService(LivroRepository livroRepository, AutorRepository autorRepository, AutorValidator validator) {
+        this.livroRepository = livroRepository;
         this.autorRepository = autorRepository;
         this.validator = validator;
     }
@@ -34,6 +40,10 @@ public class AutorService {
     }
 
     public void deletar(Autor id){
+
+        if (possuiLivro(id)){
+            throw  new OperacaoNaoPermitidaException("Esse usuario possui livros cadastrados");
+        }
         autorRepository.delete(id);
     }
 
@@ -56,5 +66,9 @@ public class AutorService {
         }
         validator.validar(autor);
         autorRepository.save(autor);
+    }
+
+    public boolean possuiLivro(Autor autor){
+       return livroRepository.existsByAutor(autor);
     }
 }

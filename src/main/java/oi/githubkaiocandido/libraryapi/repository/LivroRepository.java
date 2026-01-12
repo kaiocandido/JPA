@@ -42,4 +42,6 @@ public interface LivroRepository extends JpaRepository<Livro, UUID> {
         order by l.genero
     """)
     List<Generos> listarGenerosAutorBrasileiros();
+
+    boolean existsByAutor(Autor autor);
 }

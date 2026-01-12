@@ -1,12 +1,12 @@
 package oi.githubkaiocandido.libraryapi.controller;
 
+import oi.githubkaiocandido.libraryapi.Exceptions.OperacaoNaoPermitidaException;
 import oi.githubkaiocandido.libraryapi.Exceptions.RegistroDuplicadoException;
 import oi.githubkaiocandido.libraryapi.Service.AutorService;
 import oi.githubkaiocandido.libraryapi.controller.dto.AutorDTO;
 import oi.githubkaiocandido.libraryapi.controller.dto.ErroResposta;
 import oi.githubkaiocandido.libraryapi.model.Autor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -68,15 +68,21 @@ public class AutorController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<Void> deletar(@PathVariable("id") String id){
-        var idAutor = UUID.fromString(id);
-        Optional<Autor> autor = autorService.obterId(idAutor);
-        if (autor.isEmpty()){
-            return ResponseEntity.noContent().build();
-        }
+    public ResponseEntity<Object> deletar(@PathVariable("id") String id){
+        try {
+            var idAutor = UUID.fromString(id);
+            Optional<Autor> autor = autorService.obterId(idAutor);
 
-        autorService.deletar(autor.get());
-        return ResponseEntity.noContent().build();
+            if (autor.isEmpty()) {
+                return ResponseEntity.noContent().build();
+            }
+
+            autorService.deletar(autor.get());
+            return ResponseEntity.noContent().build();
+        } catch (OperacaoNaoPermitidaException e ){
+            var erroDTo = ErroResposta.respostaPadrão(e.getMessage());
+            return ResponseEntity.status(erroDTo.status()).body(erroDTo);
+        }
     }
 
     @GetMapping
@@ -113,7 +119,7 @@ public class AutorController {
             autorService.atualizar(autorFinal);
 
             return ResponseEntity.noContent().build();
-        }catch (RegistroDuplicadoException e ){
+        } catch (RegistroDuplicadoException e ){
             var erroDTo = ErroResposta.respostaPadrão(e.getMessage());
             return ResponseEntity.status(erroDTo.status()).body(erroDTo);
         }
