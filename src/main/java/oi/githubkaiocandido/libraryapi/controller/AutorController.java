@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -84,6 +85,23 @@ public class AutorController {
         )).collect(Collectors.toList());
 
         return ResponseEntity.ok(list);
+    }
 
+    @PutMapping("{id}")
+    public ResponseEntity<Void> atualizarAutor(@PathVariable("id") String id, @RequestBody AutorDTO dto){
+        var idAutor = UUID.fromString(id);
+        Optional<Autor> autor = autorService.obterId(idAutor);
+        if (autor.isEmpty()){
+            return ResponseEntity.noContent().build();
+        }
+
+        var autorFinal = autor.get();
+        autorFinal.setNome(dto.nome());
+        autorFinal.setNascionalidade(dto.nacionalidade());
+        autorFinal.setDataNascimento(dto.dataNascimento());
+
+        autorService.atualizar(autorFinal);
+
+        return ResponseEntity.noContent().build();
     }
 }
