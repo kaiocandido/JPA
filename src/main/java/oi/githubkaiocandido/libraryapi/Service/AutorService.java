@@ -16,7 +16,7 @@ import java.util.UUID;
 public class AutorService {
 
     @Autowired
-    LivroRepository livroRepository;
+    private LivroRepository livroRepository;
 
     @Autowired
     private AutorRepository autorRepository;
