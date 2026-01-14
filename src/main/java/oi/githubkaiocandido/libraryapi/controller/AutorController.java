@@ -88,7 +88,7 @@ public class AutorController {
             @RequestParam(value = "nome", required = false) String nome,
             @RequestParam(value ="nacionalidade", required = false) String nacionalidade){
 
-        List<Autor> lista = autorService.pesquisar(nome, nacionalidade);
+        List<Autor> lista = autorService.pesquisaByExample(nome, nacionalidade);
         List<AutorDTO> list = lista.stream().map(autor -> new AutorDTO(
                 autor.getId(),
                 autor.getNome(),
