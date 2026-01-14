@@ -7,6 +7,7 @@ import oi.githubkaiocandido.libraryapi.Exceptions.RegistroDuplicadoException;
 import oi.githubkaiocandido.libraryapi.Service.AutorService;
 import oi.githubkaiocandido.libraryapi.controller.dto.AutorDTO;
 import oi.githubkaiocandido.libraryapi.controller.dto.ErroResposta;
+import oi.githubkaiocandido.libraryapi.controller.mappers.AutorMapper;
 import oi.githubkaiocandido.libraryapi.model.Autor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -34,12 +35,13 @@ public class AutorController {
 
 
     private final AutorService autorService;
+    private final AutorMapper mapper;
 
     @PostMapping
     //@RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<Object> salvar(@RequestBody @Valid AutorDTO autor){
         try {
-            var autorEntidade = autor.mapearParaAutor();
+            var autorEntidade = mapper.toEntity(autor);
             autorService.salvar(autorEntidade);
 
             // -> host http:localhost:8080/autores/id
@@ -59,7 +61,7 @@ public class AutorController {
         Optional<Autor> autor = autorService.obterId(idAutor);
         if (autor.isPresent()){
             Autor entidade = autor.get();
-            AutorDTO dto = new AutorDTO(entidade.getId(), entidade.getNome(), entidade.getDataNascimento(), entidade.getNascionalidade());
+            AutorDTO dto = mapper.toDTO(entidade);
             return ResponseEntity.ok(dto);
         }
         return ResponseEntity.notFound().build();
@@ -89,12 +91,7 @@ public class AutorController {
             @RequestParam(value ="nacionalidade", required = false) String nacionalidade){
 
         List<Autor> lista = autorService.pesquisaByExample(nome, nacionalidade);
-        List<AutorDTO> list = lista.stream().map(autor -> new AutorDTO(
-                autor.getId(),
-                autor.getNome(),
-                autor.getDataNascimento(),
-                autor.getNascionalidade()
-        )).collect(Collectors.toList());
+        List<AutorDTO> list = lista.stream().map(mapper::toDTO).collect(Collectors.toList());
 
         return ResponseEntity.ok(list);
     }

@@ -22,11 +22,4 @@ public record AutorDTO(
         String nascionalidade
 ) {
 
-    public Autor mapearParaAutor(){
-        Autor autor = new Autor();
-        autor.setNome(nome);
-        autor.setDataNascimento(dataNascimento);
-        autor.setNascionalidade(nascionalidade);
-        return autor;
-    }
 }
