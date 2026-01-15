@@ -21,15 +21,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class LivroController implements GenericController {
     private final LivrosService livrosService;
     private final LivroMapper mapper;
+
     @PostMapping
-    public ResponseEntity<Object> salvar(@RequestBody @Valid CadastroLivroDTO dto){
+    public ResponseEntity<Object> salvar(@RequestBody @Valid CadastroLivroDTO dto) {
         try {
             Livro livro = mapper.toEntity(dto);
             livrosService.salvar(livro);
             var url = gerarUrl(livro.getId());
 
-            return  ResponseEntity.created(url).build();
-        } catch (RegistroDuplicadoException e){
+            return ResponseEntity.created(url).build();
+        } catch (RegistroDuplicadoException e) {
             var erroDTo = ErroResposta.conflito(e.getMessage());
             return ResponseEntity.status(erroDTo.status()).body(erroDTo);
         }
