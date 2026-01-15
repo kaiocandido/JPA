@@ -10,6 +10,7 @@ import oi.githubkaiocandido.libraryapi.controller.dto.PesquisaLivroDTO;
 import oi.githubkaiocandido.libraryapi.controller.mappers.LivroMapper;
 import oi.githubkaiocandido.libraryapi.model.Livro;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -42,12 +43,20 @@ public class LivroController implements GenericController {
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<PesquisaLivroDTO> obterDetalhes(@PathVariable String id ){
+    public ResponseEntity<PesquisaLivroDTO> obterDetalhes(@PathVariable("id") String id ){
         return livrosService.obterId(UUID.fromString(id))
                 .map(livro ->
                 {
                     var dto = mapper.toDTO(livro);
                     return ResponseEntity.ok(dto);
                 }).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<Object> deletar(@PathVariable("id") String id){
+        return livrosService.obterId(UUID.fromString(id)).map(livro -> {
+            livrosService.deletar(livro);
+            return ResponseEntity.noContent().build();
+        }).orElseGet(() -> ResponseEntity.notFound().build());
     }
 }
