@@ -1,6 +1,7 @@
 package oi.githubkaiocandido.libraryapi.Service;
 
 import lombok.RequiredArgsConstructor;
+import oi.githubkaiocandido.libraryapi.Exceptions.OperacaoNaoPermitidaException;
 import oi.githubkaiocandido.libraryapi.model.Generos;
 import oi.githubkaiocandido.libraryapi.model.Livro;
 import oi.githubkaiocandido.libraryapi.repository.LivroRepository;
@@ -52,5 +53,13 @@ public class LivrosService {
         }
 
         return livroRepository.findAll(specs);
+    }
+
+    public void atualiza(Livro livro) {
+        if (livro.getId() == null){
+            throw  new OperacaoNaoPermitidaException("Esse usuario possui livros cadastrados");
+        }
+
+        livroRepository.save(livro);
     }
 }
