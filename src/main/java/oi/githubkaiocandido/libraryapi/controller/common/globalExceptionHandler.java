@@ -1,5 +1,6 @@
 package oi.githubkaiocandido.libraryapi.controller.common;
 
+import oi.githubkaiocandido.libraryapi.Exceptions.CampoInvalidoExecption;
 import oi.githubkaiocandido.libraryapi.controller.dto.ErroResposta;
 import oi.githubkaiocandido.libraryapi.controller.dto.ErrorCampo;
 import org.springframework.http.HttpStatus;
@@ -25,9 +26,18 @@ public class globalExceptionHandler {
     }
 
     @ExceptionHandler
+    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    public ErroResposta handleCampoInvalidoExecption(CampoInvalidoExecption e){
+        return new ErroResposta(HttpStatus.UNPROCESSABLE_ENTITY.value(), "Erro validação",
+                List.of(new ErrorCampo(e.getCampo(), e.getMessage())));
+    }
+
+    @ExceptionHandler
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ErroResposta handleErrosNaoTratados(RuntimeException e){
         return new ErroResposta(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Erro inesperado, entre em contato", List.of());
     }
+
+
 }
 
