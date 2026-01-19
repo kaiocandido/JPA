@@ -31,7 +31,7 @@ public class LivroValidator {
     }
 
     public boolean existeLivroComIsbn(Livro livro){
-        Optional<Livro> byIsbnUnico = repository.findByIsbnUnico(livro.getIsbn());
+        Optional<Livro> byIsbnUnico = repository.findByIsbn(livro.getIsbn());
 
         if (livro.getId() == null){
             return byIsbnUnico.isPresent();

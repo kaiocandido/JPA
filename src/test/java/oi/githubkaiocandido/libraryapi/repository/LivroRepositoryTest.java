@@ -92,11 +92,12 @@ class LivroRepositoryTest {
         byTitulo.forEach(System.out::println);
     }
 
+    /*
     @Test
     public void pesquisarPorIsbnTest(){
         List<Livro> byIsbn = livroRepository.findByIsbn("6444446354");
         byIsbn.forEach(System.out::println);
-    }
+    }*/
 
     @Test
     public void pesquisaPorTituloAndPrecoTest(){

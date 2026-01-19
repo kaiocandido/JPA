@@ -7,10 +7,12 @@ import oi.githubkaiocandido.libraryapi.model.Livro;
 import oi.githubkaiocandido.libraryapi.repository.LivroRepository;
 import oi.githubkaiocandido.libraryapi.repository.specs.LivroSpecs;
 import oi.githubkaiocandido.libraryapi.validator.LivroValidator;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -34,28 +36,39 @@ public class LivrosService {
         livroRepository.delete(livro);
     }
 
-    public List<Livro> buscaPorLivros(String isbn, String titulo, String nomeAutor, Generos genero, Integer anoPublicacao){
+    public Page<Livro> buscaPorLivros(
+            String isbn,
+            String titulo,
+            String nomeAutor,
+            Generos genero,
+            Integer anoPublicacao,
+            Integer pagina,
+            Integer tamanhoPagina
+    ) {
 
-        Specification<Livro> specs = Specification.where((root, query, criteriaBuilder) ->
-                criteriaBuilder.conjunction());
+        Specification<Livro> specs = Specification.where(
+                (root, query, criteriaBuilder) -> criteriaBuilder.conjunction()
+        );
 
-        if (isbn != null){
+        if (isbn != null) {
             specs = specs.and(LivroSpecs.isbnEqual(isbn));
         }
-        if (titulo != null){
+        if (titulo != null) {
             specs = specs.and(LivroSpecs.tituloLike(titulo));
         }
-        if (genero != null){
+        if (genero != null) {
             specs = specs.and(LivroSpecs.generoEqual(genero));
         }
-        if(anoPublicacao != null){
+        if (anoPublicacao != null) {
             specs = specs.and(LivroSpecs.anoEqual(anoPublicacao));
         }
-        if (nomeAutor != null){
+        if (nomeAutor != null) {
             specs = specs.and(LivroSpecs.nomeAutorLike(nomeAutor));
         }
 
-        return livroRepository.findAll(specs);
+        Pageable pageable = PageRequest.of(pagina, tamanhoPagina);
+
+        return livroRepository.findAll(specs, pageable);
     }
 
     public void atualiza(Livro livro) {

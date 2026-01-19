@@ -10,6 +10,7 @@ import oi.githubkaiocandido.libraryapi.controller.dto.PesquisaLivroDTO;
 import oi.githubkaiocandido.libraryapi.controller.mappers.LivroMapper;
 import oi.githubkaiocandido.libraryapi.model.Generos;
 import oi.githubkaiocandido.libraryapi.model.Livro;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -66,26 +67,27 @@ public class LivroController implements GenericController {
     }
 
     @GetMapping
-    public ResponseEntity<List<PesquisaLivroDTO>> pesquisaAll(
-            @RequestParam(value = "isbn", required = false)
-            String isbn,
-            @RequestParam(value = "titulo", required = false)
-            String titulo,
-            @RequestParam(value = "nome-autor", required = false)
-            String nomeAutor,
-            @RequestParam(value = "genero", required = false)
-            Generos genero,
-            @RequestParam(value = "ano-publicacao", required = false)
-            Integer anoPublicacao
-    ){
-        var resultado = livrosService.buscaPorLivros(isbn,  titulo,  nomeAutor,  genero,  anoPublicacao);
-        var lista = resultado.stream().map(mapper::toDTO).collect(Collectors.toList());
+    public ResponseEntity<org.springframework.data.domain.Page<PesquisaLivroDTO>> pesquisaAll(
+            @RequestParam(value = "isbn", required = false) String isbn,
+            @RequestParam(value = "titulo", required = false) String titulo,
+            @RequestParam(value = "nome-autor", required = false) String nomeAutor,
+            @RequestParam(value = "genero", required = false) Generos genero,
+            @RequestParam(value = "ano-publicacao", required = false) Integer anoPublicacao,
+            @RequestParam(value = "pagina", defaultValue = "0") Integer pagina,
+            @RequestParam(value = "tamanho-pagina", defaultValue = "10") Integer tamanhoPagina
+    ) {
 
-        return ResponseEntity.ok(lista);
+        org.springframework.data.domain.Page<Livro> resultado =
+                livrosService.buscaPorLivros(isbn, titulo, nomeAutor, genero, anoPublicacao, pagina, tamanhoPagina);
+
+        Page<PesquisaLivroDTO> pageDto = resultado.map(mapper::toDTO);
+
+        return ResponseEntity.ok(pageDto);
     }
 
     @PutMapping("{id}")
     public ResponseEntity<Object> atualizarLivro(@PathVariable("id") String id, @RequestBody @Valid CadastroLivroDTO dto){
+
         return livrosService.obterId(UUID.fromString(id))
                 .map(livro -> {
                     Livro entidade = mapper.toEntity(dto);
