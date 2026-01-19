@@ -6,6 +6,7 @@ import oi.githubkaiocandido.libraryapi.model.Generos;
 import oi.githubkaiocandido.libraryapi.model.Livro;
 import oi.githubkaiocandido.libraryapi.repository.LivroRepository;
 import oi.githubkaiocandido.libraryapi.repository.specs.LivroSpecs;
+import oi.githubkaiocandido.libraryapi.validator.LivroValidator;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +19,10 @@ import java.util.UUID;
 public class LivrosService {
 
     private final LivroRepository  livroRepository;
+    private final LivroValidator validator;
 
     public Livro salvar(Livro livro){
+        validator.validar(livro);
         return livroRepository.save(livro);
     }
 
@@ -56,10 +59,12 @@ public class LivrosService {
     }
 
     public void atualiza(Livro livro) {
+
         if (livro.getId() == null){
             throw  new OperacaoNaoPermitidaException("Esse usuario possui livros cadastrados");
         }
 
+        validator.validar(livro);
         livroRepository.save(livro);
     }
 }
