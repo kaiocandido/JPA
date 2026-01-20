@@ -6,7 +6,6 @@ import oi.githubkaiocandido.libraryapi.model.Autor;
 import oi.githubkaiocandido.libraryapi.repository.AutorRepository;
 import oi.githubkaiocandido.libraryapi.repository.LivroRepository;
 import oi.githubkaiocandido.libraryapi.validator.AutorValidator;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;

@@ -77,7 +77,7 @@ public class AutorController implements GenericController {
             autorService.deletar(autor.get());
             return ResponseEntity.noContent().build();
         } catch (OperacaoNaoPermitidaException e) {
-            var erroDTo = ErroResposta.respostaPadrão(e.getMessage());
+            var erroDTo = ErroResposta.respostaPadrao(e.getMessage());
             return ResponseEntity.status(erroDTo.status()).body(erroDTo);
         }
     }
@@ -112,7 +112,7 @@ public class AutorController implements GenericController {
 
             return ResponseEntity.noContent().build();
         } catch (RegistroDuplicadoException e) {
-            var erroDTo = ErroResposta.respostaPadrão(e.getMessage());
+            var erroDTo = ErroResposta.respostaPadrao(e.getMessage());
             return ResponseEntity.status(erroDTo.status()).body(erroDTo);
         }
 

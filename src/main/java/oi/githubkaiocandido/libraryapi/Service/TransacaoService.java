@@ -6,7 +6,6 @@ import oi.githubkaiocandido.libraryapi.model.Generos;
 import oi.githubkaiocandido.libraryapi.model.Livro;
 import oi.githubkaiocandido.libraryapi.repository.AutorRepository;
 import oi.githubkaiocandido.libraryapi.repository.LivroRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,7 +26,7 @@ public class TransacaoService {
 
         autor.setNome("Francisco");
         autor.setNascionalidade("Brasileira");
-        autor.setDataNascimento(LocalDate.of(2002, 01, 27));
+        autor.setDataNascimento(LocalDate.of(2002, 1, 27));
         autorRepository.save(autor);
 
         //SALVA O LIVRO

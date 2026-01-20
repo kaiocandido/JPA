@@ -6,7 +6,7 @@ import java.util.List;
 
 public record ErroResposta(int status, String msg, List<ErrorCampo> erros) {
 
-    public static ErroResposta respostaPadrão(String msg){
+    public static ErroResposta respostaPadrao(String msg){
         return new ErroResposta(HttpStatus.BAD_REQUEST.value(), msg, List.of());
     }
 
