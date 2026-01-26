@@ -10,6 +10,7 @@ import oi.githubkaiocandido.libraryapi.controller.dto.ErroResposta;
 import oi.githubkaiocandido.libraryapi.controller.mappers.AutorMapper;
 import oi.githubkaiocandido.libraryapi.model.Autor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,6 +37,7 @@ public class AutorController implements GenericController {
 
     @PostMapping
     //@RequestMapping(method = RequestMethod.POST)
+    @PreAuthorize("hasRole('GERENTE')")
     public ResponseEntity<Object> salvar(@RequestBody @Valid AutorDTO autor) {
         try {
             var autorEntidade = mapper.toEntity(autor);
@@ -52,6 +54,7 @@ public class AutorController implements GenericController {
     }
 
     @GetMapping("{id}")
+    @PreAuthorize("hasRole('GERENTE')")
     public ResponseEntity<AutorDTO> obterDetalhes(@PathVariable("id") String id) {
         var idAutor = UUID.fromString(id);
 
@@ -65,6 +68,7 @@ public class AutorController implements GenericController {
     }
 
     @DeleteMapping("{id}")
+    @PreAuthorize("hasRole('GERENTE')")
     public ResponseEntity<Object> deletar(@PathVariable("id") String id) {
         try {
             var idAutor = UUID.fromString(id);
@@ -83,6 +87,7 @@ public class AutorController implements GenericController {
     }
 
     @GetMapping
+    @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
     public ResponseEntity<List<AutorDTO>> listarAutorDto(
             @RequestParam(value = "nome", required = false) String nome,
             @RequestParam(value = "nacionalidade", required = false) String nacionalidade) {
@@ -94,6 +99,7 @@ public class AutorController implements GenericController {
     }
 
     @PutMapping("{id}")
+    @PreAuthorize("hasRole('GERENTE')")
     public ResponseEntity<Object> atualizarAutor(@Valid @PathVariable("id") String id, @Valid @RequestBody AutorDTO dto) {
 
         try {

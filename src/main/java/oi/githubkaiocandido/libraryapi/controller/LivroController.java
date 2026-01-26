@@ -12,6 +12,7 @@ import oi.githubkaiocandido.libraryapi.model.Generos;
 import oi.githubkaiocandido.libraryapi.model.Livro;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,6 +34,7 @@ public class LivroController implements GenericController {
     private final LivroMapper mapper;
 
     @PostMapping
+    @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
     public ResponseEntity<Object> salvar(@RequestBody @Valid CadastroLivroDTO dto) {
         try {
             Livro livro = mapper.toEntity(dto);
@@ -47,6 +49,7 @@ public class LivroController implements GenericController {
     }
 
     @GetMapping("{id}")
+    @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
     public ResponseEntity<PesquisaLivroDTO> obterDetalhes(@PathVariable("id") String id ){
         return livrosService.obterId(UUID.fromString(id))
                 .map(livro ->
@@ -57,6 +60,7 @@ public class LivroController implements GenericController {
     }
 
     @DeleteMapping("{id}")
+    @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
     public ResponseEntity<Object> deletar(@PathVariable("id") String id){
         return livrosService.obterId(UUID.fromString(id)).map(livro -> {
             livrosService.deletar(livro);
@@ -65,6 +69,7 @@ public class LivroController implements GenericController {
     }
 
     @GetMapping
+    @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
     public ResponseEntity<org.springframework.data.domain.Page<PesquisaLivroDTO>> pesquisaAll(
             @RequestParam(value = "isbn", required = false) String isbn,
             @RequestParam(value = "titulo", required = false) String titulo,
@@ -84,6 +89,7 @@ public class LivroController implements GenericController {
     }
 
     @PutMapping("{id}")
+    @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
     public ResponseEntity<Object> atualizarLivro(@PathVariable("id") String id, @RequestBody @Valid CadastroLivroDTO dto){
 
         return livrosService.obterId(UUID.fromString(id))

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.nio.file.AccessDeniedException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -38,6 +39,11 @@ public class globalExceptionHandler {
         return new ErroResposta(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Erro inesperado, entre em contato", List.of());
     }
 
+    @ExceptionHandler
+    @ResponseStatus(HttpStatus.FORBIDDEN)
+    public ErroResposta handleAcessDenyException(AccessDeniedException e){
+        return new ErroResposta(HttpStatus.FORBIDDEN.value(), "ACESSO NEGADO!!", List.of());
+    }
 
 }
 
