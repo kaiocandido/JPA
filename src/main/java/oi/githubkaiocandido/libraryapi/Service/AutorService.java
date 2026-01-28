@@ -3,12 +3,14 @@ package oi.githubkaiocandido.libraryapi.Service;
 import lombok.RequiredArgsConstructor;
 import oi.githubkaiocandido.libraryapi.Exceptions.OperacaoNaoPermitidaException;
 import oi.githubkaiocandido.libraryapi.model.Autor;
+import oi.githubkaiocandido.libraryapi.model.Usuario;
 import oi.githubkaiocandido.libraryapi.repository.AutorRepository;
 import oi.githubkaiocandido.libraryapi.repository.LivroRepository;
 import oi.githubkaiocandido.libraryapi.validator.AutorValidator;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
+import oi.githubkaiocandido.libraryapi.security.SecurityService;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,9 +26,13 @@ public class AutorService {
 
     private  final AutorValidator validator;
 
+    private final SecurityService securityService;
+
 
     public Autor salvar(Autor autor){
         validator.validar(autor);
+        Usuario usuario = securityService.obterUsuarioLogado();
+        autor.setUsuario(usuario);
         return autorRepository.save(autor);
     }
 

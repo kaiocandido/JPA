@@ -5,10 +5,12 @@ import lombok.RequiredArgsConstructor;
 import oi.githubkaiocandido.libraryapi.Exceptions.OperacaoNaoPermitidaException;
 import oi.githubkaiocandido.libraryapi.Exceptions.RegistroDuplicadoException;
 import oi.githubkaiocandido.libraryapi.Service.AutorService;
+import oi.githubkaiocandido.libraryapi.Service.UsuariosSerive;
 import oi.githubkaiocandido.libraryapi.controller.dto.AutorDTO;
 import oi.githubkaiocandido.libraryapi.controller.dto.ErroResposta;
 import oi.githubkaiocandido.libraryapi.controller.mappers.AutorMapper;
 import oi.githubkaiocandido.libraryapi.model.Autor;
+import oi.githubkaiocandido.libraryapi.model.Usuario;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -34,11 +36,13 @@ public class AutorController implements GenericController {
 
     private final AutorService autorService;
     private final AutorMapper mapper;
+    private final UsuariosSerive usuariosSerive;
 
     @PostMapping
     //@RequestMapping(method = RequestMethod.POST)
     @PreAuthorize("hasRole('GERENTE')")
     public ResponseEntity<Object> salvar(@RequestBody @Valid AutorDTO autor) {
+
         try {
             var autorEntidade = mapper.toEntity(autor);
             autorService.salvar(autorEntidade);

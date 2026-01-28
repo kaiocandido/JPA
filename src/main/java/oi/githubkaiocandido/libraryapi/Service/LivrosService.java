@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import oi.githubkaiocandido.libraryapi.Exceptions.OperacaoNaoPermitidaException;
 import oi.githubkaiocandido.libraryapi.model.Generos;
 import oi.githubkaiocandido.libraryapi.model.Livro;
+import oi.githubkaiocandido.libraryapi.model.Usuario;
 import oi.githubkaiocandido.libraryapi.repository.LivroRepository;
 import oi.githubkaiocandido.libraryapi.repository.specs.LivroSpecs;
 import oi.githubkaiocandido.libraryapi.validator.LivroValidator;
@@ -12,6 +13,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import oi.githubkaiocandido.libraryapi.security.SecurityService;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -22,9 +24,12 @@ public class LivrosService {
 
     private final LivroRepository  livroRepository;
     private final LivroValidator validator;
+    private final SecurityService securityService;
 
     public Livro salvar(Livro livro){
         validator.validar(livro);
+        Usuario usuario = securityService.obterUsuarioLogado();
+        livro.setUsuario(usuario);
         return livroRepository.save(livro);
     }
 

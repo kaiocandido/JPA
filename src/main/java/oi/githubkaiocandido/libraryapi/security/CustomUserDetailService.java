@@ -1,4 +1,4 @@
-package security;
+package oi.githubkaiocandido.libraryapi.security;
 
 import lombok.RequiredArgsConstructor;
 import oi.githubkaiocandido.libraryapi.Service.UsuariosSerive;
