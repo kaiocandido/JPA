@@ -1,7 +1,7 @@
 package oi.githubkaiocandido.libraryapi.security;
 
 import lombok.RequiredArgsConstructor;
-import oi.githubkaiocandido.libraryapi.Service.UsuariosSerive;
+import oi.githubkaiocandido.libraryapi.Service.UsuariosService;
 import oi.githubkaiocandido.libraryapi.model.Usuario;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class CustomAutheticationProvaider implements AuthenticationProvider {
 
-    private final UsuariosSerive usuariosSerive;
+    private final UsuariosService usuariosSerive;
     private final PasswordEncoder passwordEncoder;
 
     @Override

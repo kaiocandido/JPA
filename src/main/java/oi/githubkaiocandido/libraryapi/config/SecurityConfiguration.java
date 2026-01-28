@@ -1,6 +1,6 @@
 package oi.githubkaiocandido.libraryapi.config;
 
-import oi.githubkaiocandido.libraryapi.Service.UsuariosSerive;
+import oi.githubkaiocandido.libraryapi.Service.UsuariosService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.core.GrantedAuthorityDefaults;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -45,7 +44,7 @@ public class SecurityConfiguration {
 
 
     //@Bean
-    public UserDetailsService userDetailsService(UsuariosSerive usuariosSerive){
+    public UserDetailsService userDetailsService(UsuariosService usuariosSerive){
         return new CustomUserDetailService(usuariosSerive);
     }
 
