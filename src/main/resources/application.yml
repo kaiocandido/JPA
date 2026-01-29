@@ -19,12 +19,7 @@ spring:
       name: admin
       password: admin123
       roles: USER
-    oauth2:
-      client:
-        registration:
-          google:
-            client-id:
-            client-secret:
+
 
 # Criar banco automatico
 #  jpa:
