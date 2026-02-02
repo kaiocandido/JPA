@@ -16,9 +16,9 @@ spring:
        hibernate.format_sql: true
   security:
     user:
-      name: admin
-      password: admin123
-      roles: USER
+      name: #admin
+      password: #admin123
+      roles: #USER
     oauth2:
       client:
         registration:

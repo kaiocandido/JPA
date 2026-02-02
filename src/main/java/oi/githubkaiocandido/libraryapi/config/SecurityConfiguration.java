@@ -1,6 +1,7 @@
 package oi.githubkaiocandido.libraryapi.config;
 
 import oi.githubkaiocandido.libraryapi.Service.UsuariosService;
+import oi.githubkaiocandido.libraryapi.security.LoginSocialSucessHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -22,7 +23,7 @@ import oi.githubkaiocandido.libraryapi.security.CustomUserDetailService;
 public class SecurityConfiguration {
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, LoginSocialSucessHandler loginSocialSucessHandler) throws Exception{
         return httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
                 .formLogin(configurer -> configurer.loginPage("/login").permitAll())
@@ -33,6 +34,9 @@ public class SecurityConfiguration {
                             authorize.anyRequest().authenticated();
 
                 }).oauth2Login(Customizer.withDefaults())
+                .oauth2Login(ouath2 -> {
+                    ouath2.successHandler(loginSocialSucessHandler);
+                })
                 .build();
     }
 
