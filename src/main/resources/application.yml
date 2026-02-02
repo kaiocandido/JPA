@@ -16,15 +16,15 @@ spring:
        hibernate.format_sql: true
   security:
     user:
-      name: #admin
-      password: #admin123
-      roles: #USER
+      name: ${USER_CLIENT}
+      password: ${PSQL_SECRET}
+      roles: USER
     oauth2:
       client:
         registration:
           google:
-            client-id:
-            client-secret:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
 
 # Criar banco automatico
 #  jpa:
