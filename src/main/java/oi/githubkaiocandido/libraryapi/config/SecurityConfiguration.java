@@ -40,18 +40,6 @@ public class SecurityConfiguration {
                 .build();
     }
 
-
-    @Bean
-    public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder(10);
-    }
-
-
-    //@Bean
-    public UserDetailsService userDetailsService(UsuariosService usuariosSerive){
-        return new CustomUserDetailService(usuariosSerive);
-    }
-
     @Bean
     public GrantedAuthorityDefaults grantedAuthorityDefaults(){
         return new GrantedAuthorityDefaults("");
