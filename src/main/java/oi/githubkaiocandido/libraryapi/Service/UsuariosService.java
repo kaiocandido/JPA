@@ -24,7 +24,7 @@ public class UsuariosService {
     }
 
     public Usuario obterPorEmail (String email){
-        return repository.findByEmail();
+        return repository.findByEmail(email);
     }
 
 }

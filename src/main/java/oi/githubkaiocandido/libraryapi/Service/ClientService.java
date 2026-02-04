@@ -21,6 +21,6 @@ public class ClientService {
     }
 
     public Client obterPorClientId(String clientId){
-                return repository.findByClientId();
+                return repository.findByClientId(clientId);
     }
 }

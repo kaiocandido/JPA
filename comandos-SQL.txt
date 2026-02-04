@@ -38,4 +38,4 @@ create table client (
     client_secret varchar(400) not null,
     redirect_uri varchar(200) not null,
     scope varchar(50)
-)
+);
