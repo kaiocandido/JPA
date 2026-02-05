@@ -14,6 +14,8 @@ import org.springframework.security.config.core.GrantedAuthorityDefaults;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
+import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.web.SecurityFilterChain;
 import oi.githubkaiocandido.libraryapi.security.CustomUserDetailService;
 
@@ -26,6 +28,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, LoginSocialSucessHandler loginSocialSucessHandler) throws Exception{
         return httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
+                .httpBasic(Customizer.withDefaults())
                 .formLogin(configurer -> configurer.loginPage("/login").permitAll())
                 .authorizeHttpRequests(authorize ->{
                             authorize.requestMatchers("/login").permitAll();
@@ -37,11 +40,27 @@ public class SecurityConfiguration {
                     ouath2.loginPage("/login")
                     .successHandler(loginSocialSucessHandler);
                 })
+                .oauth2ResourceServer(oauthTwoRs -> oauthTwoRs.jwt(Customizer.withDefaults()))
                 .build();
     }
 
+    //CONFIGURA NO ROLA JWT O PREFIX
     @Bean
     public GrantedAuthorityDefaults grantedAuthorityDefaults(){
         return new GrantedAuthorityDefaults("");
+    }
+
+
+    //CONFIGURA NO TOKEN JWT O PREFIX SCOPE
+    @Bean
+    public JwtAuthenticationConverter jwtAuthenticationConverter(){
+        var authoritesConvert = new JwtGrantedAuthoritiesConverter();
+        authoritesConvert.setAuthorityPrefix("");
+
+        var converter = new JwtAuthenticationConverter();
+        converter.setJwtGrantedAuthoritiesConverter(authoritesConvert);
+
+        return converter;
+
     }
 }
