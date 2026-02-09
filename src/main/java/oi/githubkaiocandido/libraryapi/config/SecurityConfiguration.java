@@ -1,6 +1,7 @@
 package oi.githubkaiocandido.libraryapi.config;
 
 import oi.githubkaiocandido.libraryapi.Service.UsuariosService;
+import oi.githubkaiocandido.libraryapi.security.JwtCustomAuthenticationFilter;
 import oi.githubkaiocandido.libraryapi.security.LoginSocialSucessHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +17,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
+import org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter;
 import org.springframework.security.web.SecurityFilterChain;
 import oi.githubkaiocandido.libraryapi.security.CustomUserDetailService;
 
@@ -25,7 +27,7 @@ import oi.githubkaiocandido.libraryapi.security.CustomUserDetailService;
 public class SecurityConfiguration {
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, LoginSocialSucessHandler loginSocialSucessHandler) throws Exception{
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, LoginSocialSucessHandler loginSocialSucessHandler, JwtCustomAuthenticationFilter jwtCustomAuthenticationFilter) throws Exception{
         return httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
                 .httpBasic(Customizer.withDefaults())
@@ -41,6 +43,7 @@ public class SecurityConfiguration {
                     .successHandler(loginSocialSucessHandler);
                 })
                 .oauth2ResourceServer(oauthTwoRs -> oauthTwoRs.jwt(Customizer.withDefaults()))
+                .addFilterAfter(jwtCustomAuthenticationFilter, BearerTokenAuthenticationFilter.class)
                 .build();
     }
 
