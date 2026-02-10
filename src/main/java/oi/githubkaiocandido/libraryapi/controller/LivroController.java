@@ -1,5 +1,9 @@
 package oi.githubkaiocandido.libraryapi.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import oi.githubkaiocandido.libraryapi.Exceptions.RegistroDuplicadoException;
@@ -28,13 +32,19 @@ import java.util.UUID;
 @RestController
 @RequestMapping("livros")
 @RequiredArgsConstructor
-
+@Tag(name = "Livros")
 public class LivroController implements GenericController {
     private final LivrosService livrosService;
     private final LivroMapper mapper;
 
     @PostMapping
     @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
+    @Operation(summary = "Salvar Livros", description = "Salvar Livros")
+    @ApiResponses({
+            @ApiResponse(responseCode =  "201", description = "Livro cadastrado com sucesso"),
+            @ApiResponse(responseCode =  "422", description = "Erro de validação"),
+            @ApiResponse(responseCode =  "409", description = "Livro já cadastrado")
+    })
     public ResponseEntity<Object> salvar(@RequestBody @Valid CadastroLivroDTO dto) {
         try {
             Livro livro = mapper.toEntity(dto);
@@ -50,6 +60,11 @@ public class LivroController implements GenericController {
 
     @GetMapping("{id}")
     @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
+    @Operation(summary = "Pesquisar Livros", description = "Pesquisar Livros por UUID")
+    @ApiResponses({
+            @ApiResponse(responseCode =  "201", description = "Livro encontrado com sucesso"),
+            @ApiResponse(responseCode =  "404", description = "Livro não encotrado")
+    })
     public ResponseEntity<PesquisaLivroDTO> obterDetalhes(@PathVariable("id") String id ){
         return livrosService.obterId(UUID.fromString(id))
                 .map(livro ->
@@ -61,6 +76,11 @@ public class LivroController implements GenericController {
 
     @DeleteMapping("{id}")
     @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
+    @Operation(summary = "Deletar Livros", description = "Deletar Livros por UUID")
+    @ApiResponses({
+            @ApiResponse(responseCode =  "201", description = "Livro deletado com sucesso"),
+            @ApiResponse(responseCode =  "404", description = "Livro não encotrado")
+    })
     public ResponseEntity<Object> deletar(@PathVariable("id") String id){
         return livrosService.obterId(UUID.fromString(id)).map(livro -> {
             livrosService.deletar(livro);
@@ -70,6 +90,11 @@ public class LivroController implements GenericController {
 
     @GetMapping
     @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
+    @Operation(summary = "Listar todos Livros", description = "Listar todos Livros cadastrados")
+    @ApiResponses({
+            @ApiResponse(responseCode =  "201", description = "Livro listado com sucesso"),
+            @ApiResponse(responseCode =  "404", description = "Livro não encotrado")
+    })
     public ResponseEntity<org.springframework.data.domain.Page<PesquisaLivroDTO>> pesquisaAll(
             @RequestParam(value = "isbn", required = false) String isbn,
             @RequestParam(value = "titulo", required = false) String titulo,
@@ -90,6 +115,12 @@ public class LivroController implements GenericController {
 
     @PutMapping("{id}")
     @PreAuthorize("hasAnyRole('OPERADOR', 'GERENTE')")
+    @Operation(summary = "Atualizar Livros", description = "Atualizar Livros por UUID")
+    @ApiResponses({
+            @ApiResponse(responseCode =  "204", description = "Livro atualizado com sucesso"),
+            @ApiResponse(responseCode =  "404", description = "Livro não encotrado"),
+            @ApiResponse(responseCode =  "409", description = "Livro já cadastrado")
+    })
     public ResponseEntity<Object> atualizarLivro(@PathVariable("id") String id, @RequestBody @Valid CadastroLivroDTO dto){
 
         return livrosService.obterId(UUID.fromString(id))

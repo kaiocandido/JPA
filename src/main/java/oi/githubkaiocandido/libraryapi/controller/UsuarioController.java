@@ -1,6 +1,10 @@
 package oi.githubkaiocandido.libraryapi.controller;
 
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import oi.githubkaiocandido.libraryapi.Service.UsuariosService;
@@ -16,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("usuarios")
 @RequiredArgsConstructor
+@Tag(name = "Usuarios")
 public class UsuarioController {
 
     private final UsuariosService serive;
@@ -23,6 +28,10 @@ public class UsuarioController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @Operation(summary = "Usuario", description = "Salvar usuario")
+    @ApiResponses({
+            @ApiResponse(responseCode =  "204", description = "Usuario cadastrado com sucesso")
+    })
     public void salvar(@RequestBody @Valid UsuarioDto dto){
         var usuario = mapper.toEntity(dto);
         serive.salvar(usuario);

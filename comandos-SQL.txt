@@ -39,3 +39,5 @@ create table client (
     redirect_uri varchar(200) not null,
     scope varchar(50)
 );
+
+http://localhost:54923/swagger-ui/index.html#/

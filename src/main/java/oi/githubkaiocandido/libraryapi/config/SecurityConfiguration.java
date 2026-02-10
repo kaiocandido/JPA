@@ -10,6 +10,7 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.core.GrantedAuthorityDefaults;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -30,7 +31,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, LoginSocialSucessHandler loginSocialSucessHandler, JwtCustomAuthenticationFilter jwtCustomAuthenticationFilter) throws Exception{
         return httpSecurity
                 .csrf(AbstractHttpConfigurer::disable)
-                .httpBasic(Customizer.withDefaults())
+                //.httpBasic(Customizer.withDefaults())
                 .formLogin(configurer -> configurer.loginPage("/login").permitAll())
                 .authorizeHttpRequests(authorize ->{
                             authorize.requestMatchers("/login").permitAll();
@@ -45,6 +46,20 @@ public class SecurityConfiguration {
                 .oauth2ResourceServer(oauthTwoRs -> oauthTwoRs.jwt(Customizer.withDefaults()))
                 .addFilterAfter(jwtCustomAuthenticationFilter, BearerTokenAuthenticationFilter.class)
                 .build();
+    }
+
+    //hosts do swagger
+    @Bean
+    public WebSecurityCustomizer webSecurityCustomizer(){
+        return web ->
+             web.ignoring().requestMatchers(
+                    "/v2/api-docs/**",
+                    "/v3/api-docs/**",
+                    "/swagger-resources/**",
+                    "/swagger-ui.html",
+                    "/swagger-ui/**",
+                    "/webjars/**"
+            );
     }
 
     //CONFIGURA NO ROLA JWT O PREFIX
@@ -64,6 +79,6 @@ public class SecurityConfiguration {
         converter.setJwtGrantedAuthoritiesConverter(authoritesConvert);
 
         return converter;
-
     }
+
 }
