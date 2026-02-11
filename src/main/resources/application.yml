@@ -30,6 +30,19 @@ springdoc:
 logging:
   file:
     name: app.log
+  level:
+    root: warn
+    # trace
+    # debug
+    # info
+    # warn
+    # error
+    io:
+      github:
+        kaiocandido: trace
+    org:
+      springframework:
+        web: debug
 
 # Criar banco automatico
 #  jpa:

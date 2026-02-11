@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import oi.githubkaiocandido.libraryapi.Exceptions.OperacaoNaoPermitidaException;
 import oi.githubkaiocandido.libraryapi.Exceptions.RegistroDuplicadoException;
 import oi.githubkaiocandido.libraryapi.Service.AutorService;
@@ -35,6 +36,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/autores") // -> host http:localhost:8080/autores
 @RequiredArgsConstructor
 @Tag(name = "Autores")
+@Slf4j //habilita logs
 public class AutorController implements GenericController {
 
 
@@ -120,6 +122,12 @@ public class AutorController implements GenericController {
     public ResponseEntity<List<AutorDTO>> listarAutorDto(
             @RequestParam(value = "nome", required = false) String nome,
             @RequestParam(value = "nacionalidade", required = false) String nacionalidade) {
+        //testes especificos
+        log.trace("Pesquia Autores");
+        log.debug("Pesquia Autores");
+        log.info("Pesquia Autores");
+        log.warn("Pesquia Autores");
+        log.error("Pesquia Autores");
 
         List<Autor> lista = autorService.pesquisaByExample(nome, nacionalidade);
         List<AutorDTO> list = lista.stream().map(mapper::toDTO).collect(Collectors.toList());
