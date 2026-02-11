@@ -221,3 +221,48 @@ Action:
 
 Identify and stop the process that's listening on port 54923 or configure this application to listen on another port.
 
+2026-02-11T16:55:22.430-03:00  WARN 29280 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-02-11T16:55:27.092-03:00 DEBUG 29280 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-02-11T16:55:29.291-03:00  WARN 29280 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-11T16:55:29.831-03:00 DEBUG 29280 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2026-02-11T16:55:29.892-03:00 DEBUG 29280 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-02-11T16:55:29.982-03:00 DEBUG 29280 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-02-11T16:55:31.334-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:31.334-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:31.336-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:31.336-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:31.337-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:31.337-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:31.489-03:00 DEBUG 29280 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-11T16:55:31.640-03:00 DEBUG 29280 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-11T16:55:32.379-03:00  WARN 29280 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-02-11T16:55:32.380-03:00  WARN 29280 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-02-11T16:55:33.172-03:00  WARN 29280 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-02-11T16:55:33.553-03:00 DEBUG 29280 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-02-11T16:55:33.761-03:00  WARN 29280 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-11T16:55:33.823-03:00 DEBUG 29280 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2026-02-11T16:55:33.834-03:00 DEBUG 29280 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-02-11T16:55:33.856-03:00 DEBUG 29280 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-02-11T16:55:34.277-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:34.278-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:34.278-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:34.278-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:34.279-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:34.279-03:00  WARN 29280 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-11T16:55:34.321-03:00 DEBUG 29280 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-11T16:55:34.357-03:00 DEBUG 29280 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-11T16:55:34.590-03:00  WARN 29280 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-02-11T16:55:34.670-03:00 ERROR 29280 --- [libraryapi] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 54923 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 54923 or configure this application to listen on another port.
+

@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: libraryapi
+  output:
+    ansi:
+      enabled: ALWAYS #HABILITAR CORES NO CONSOLE
   datasource:
     url: jdbc:postgresql://localhost:5482/library
     username: postgres
@@ -28,6 +31,8 @@ spring:
 springdoc:
   override-with-generic-response: false
 logging:
+  pattern: #define o padrão dos logs
+    console: "%clr(%d{dd/MM/yyyy HH:mm:ss.SSS}){faint} %clr([%-5level]){%highlight} %clr([%thread]){magenta} %clr(%logger{36}){cyan} %clr(-){faint} %msg %clr(|){faint} %clr(host=%property{HOSTNAME:-desconhecido}){yellow} %clr(|){faint} %clr(amb=%property{AMBIENTE:-prod}){yellow} %clr(|){faint} %clr(app=%property{spring.application.name:-app}){yellow} %clr(|){faint} %clr(servico=%property{SERVICO:-api}){yellow} %clr(|){faint} %clr(traceId=%X{traceId:-sem_trace}){green} %clr(spanId=%X{spanId:-sem_span}){green} %clr(|){faint} %clr(usuario=%X{usuario:-anon}){blue} %clr(|){faint} %clr(ip=%X{ip:-0.0.0.0}){blue} %clr(|){faint} %clr(reqId=%X{requestId:-sem_req}){green} %clr(|){faint} %clr(status=%X{status:-n/a}){yellow} %clr(|){faint} %clr(tenant=%X{tenant:-n/a}){yellow}%n%wEx"
   file:
     name: app.log
   level:

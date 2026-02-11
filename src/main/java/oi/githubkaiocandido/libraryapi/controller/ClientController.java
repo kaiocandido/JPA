@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import oi.githubkaiocandido.libraryapi.Service.ClientService;
 import oi.githubkaiocandido.libraryapi.model.Client;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("clients")
 @RequiredArgsConstructor
 @Tag(name = "Cliente")
+@Slf4j
 public class ClientController {
 
     private final ClientService clientService;
@@ -30,6 +32,7 @@ public class ClientController {
             @ApiResponse(responseCode =  "409", description = "Cliente já cadastrado")
     })
     public void salvar(@RequestBody Client client){
+        log.info("Registrando novo cliente: {} com scope {}", client.getClientId(), client.getScope());
         clientService.salvar(client);
     }
 }

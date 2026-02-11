@@ -54,6 +54,7 @@ public class AutorController implements GenericController {
             @ApiResponse(responseCode =  "409", description = "Autor já cadastrado")
     })
     public ResponseEntity<Object> salvar(@RequestBody @Valid AutorDTO autor) {
+        log.info("Cadastrando novo autor: {}", autor.nome());
 
         try {
             var autorEntidade = mapper.toEntity(autor);
@@ -97,6 +98,7 @@ public class AutorController implements GenericController {
             @ApiResponse(responseCode =  "400", description = "Autor possui livro cadastrado")
     })
     public ResponseEntity<Object> deletar(@PathVariable("id") String id) {
+        log.info("Deletando autor deID: {}", id);
         try {
             var idAutor = UUID.fromString(id);
             Optional<Autor> autor = autorService.obterId(idAutor);
@@ -144,7 +146,7 @@ public class AutorController implements GenericController {
             @ApiResponse(responseCode =  "409", description = "Autor já cadastrado")
     })
     public ResponseEntity<Object> atualizarAutor(@Valid @PathVariable("id") String id, @Valid @RequestBody AutorDTO dto) {
-
+        log.info("Atualizando autor: {}", dto.nome());
         try {
             var idAutor = UUID.fromString(id);
             Optional<Autor> autor = autorService.obterId(idAutor);

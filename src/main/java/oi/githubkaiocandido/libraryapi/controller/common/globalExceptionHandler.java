@@ -1,5 +1,6 @@
 package oi.githubkaiocandido.libraryapi.controller.common;
 
+import lombok.extern.slf4j.Slf4j;
 import oi.githubkaiocandido.libraryapi.Exceptions.CampoInvalidoExecption;
 import oi.githubkaiocandido.libraryapi.controller.dto.ErroResposta;
 import oi.githubkaiocandido.libraryapi.controller.dto.ErrorCampo;
@@ -15,11 +16,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestControllerAdvice
+@Slf4j
 public class globalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
     public ErroResposta handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+        log.error("Erro de validação {}", e.getMessage());
         List<FieldError> fieldErrors = e.getFieldErrors();
         List<ErrorCampo> listaDeErr = fieldErrors.stream().map(fe -> new ErrorCampo(fe.getField(), fe.getDefaultMessage())).collect(Collectors.toList());
 
@@ -36,6 +39,8 @@ public class globalExceptionHandler {
     @ExceptionHandler
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ErroResposta handleErrosNaoTratados(RuntimeException e){
+        log.error("Erro inesperado!!", e);
+
         return new ErroResposta(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Erro inesperado, entre em contato", List.of());
     }
 
