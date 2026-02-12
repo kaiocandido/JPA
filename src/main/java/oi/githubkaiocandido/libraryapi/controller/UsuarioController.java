@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import oi.githubkaiocandido.libraryapi.Service.UsuariosService;
 import oi.githubkaiocandido.libraryapi.controller.dto.UsuarioDto;
 import oi.githubkaiocandido.libraryapi.controller.mappers.UsuarioMapper;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("usuarios")
 @RequiredArgsConstructor
 @Tag(name = "Usuarios")
+@Slf4j
 public class UsuarioController {
 
     private final UsuariosService serive;
@@ -33,6 +35,7 @@ public class UsuarioController {
             @ApiResponse(responseCode =  "204", description = "Usuario cadastrado com sucesso")
     })
     public void salvar(@RequestBody @Valid UsuarioDto dto){
+        log.info("Usuario cadastrado {}", dto.login());
         var usuario = mapper.toEntity(dto);
         serive.salvar(usuario);
     }

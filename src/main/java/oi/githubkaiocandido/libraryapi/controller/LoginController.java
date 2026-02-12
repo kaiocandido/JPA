@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.slf4j.Slf4j;
 import oi.githubkaiocandido.libraryapi.security.CustomAuthentication;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @Tag(name = "Login")
+@Slf4j
 public class LoginController {
 
     @GetMapping("/login")
@@ -27,7 +29,7 @@ public class LoginController {
             @ApiResponse(responseCode =  "204", description = "Livro atualizado com sucesso"),
     })
     public String home(Authentication authentication){
-
+        log.info("Login feito {}", authentication.getName());
         if(authentication instanceof CustomAuthentication customAuthentication){
             System.out.println(customAuthentication.getUsuario());
         }

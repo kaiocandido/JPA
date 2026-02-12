@@ -48,6 +48,13 @@ logging:
     org:
       springframework:
         web: debug
+management:
+  server:
+    port: 2001
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 # Criar banco automatico
 #  jpa:

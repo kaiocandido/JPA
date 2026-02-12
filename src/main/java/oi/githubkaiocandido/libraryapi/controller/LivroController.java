@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import oi.githubkaiocandido.libraryapi.Exceptions.RegistroDuplicadoException;
 import oi.githubkaiocandido.libraryapi.Service.LivrosService;
 import oi.githubkaiocandido.libraryapi.controller.dto.CadastroLivroDTO;
@@ -33,6 +34,7 @@ import java.util.UUID;
 @RequestMapping("livros")
 @RequiredArgsConstructor
 @Tag(name = "Livros")
+@Slf4j
 public class LivroController implements GenericController {
     private final LivrosService livrosService;
     private final LivroMapper mapper;
@@ -45,7 +47,9 @@ public class LivroController implements GenericController {
             @ApiResponse(responseCode =  "422", description = "Erro de validação"),
             @ApiResponse(responseCode =  "409", description = "Livro já cadastrado")
     })
+
     public ResponseEntity<Object> salvar(@RequestBody @Valid CadastroLivroDTO dto) {
+        log.info("Cadastrando novo livro {}", dto.titulo());
         try {
             Livro livro = mapper.toEntity(dto);
             livrosService.salvar(livro);
@@ -82,6 +86,7 @@ public class LivroController implements GenericController {
             @ApiResponse(responseCode =  "404", description = "Livro não encotrado")
     })
     public ResponseEntity<Object> deletar(@PathVariable("id") String id){
+        log.info("Livro deletado id: {}", id);
         return livrosService.obterId(UUID.fromString(id)).map(livro -> {
             livrosService.deletar(livro);
             return ResponseEntity.noContent().build();
@@ -122,7 +127,7 @@ public class LivroController implements GenericController {
             @ApiResponse(responseCode =  "409", description = "Livro já cadastrado")
     })
     public ResponseEntity<Object> atualizarLivro(@PathVariable("id") String id, @RequestBody @Valid CadastroLivroDTO dto){
-
+        log.info("Livro atualizado {}", dto.titulo());
         return livrosService.obterId(UUID.fromString(id))
                 .map(livro -> {
                     Livro entidade = mapper.toEntity(dto);
