@@ -26,18 +26,18 @@ docker  network create library-network
 docker run --name librarydb -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=library -p 5482:5432 --network library-network postgres
 docker run --name pgadmin4 -p 15432:80 -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=admin --network library-network dpage/pgadmin4
 
-#Comando para buildar imagem
-
+# Comando para buildar imagem
 docker build --tag kaiocandido/libraryapi
 
 #Acesso ao SWAGGER
 http://localhost:54923/swagger-ui/index.html#/
 
-#Comando para buildar java
-
+# Comando para buildar java
 ./mvnw clean package -DskipTests
 java -jar .\target\libraryapi-0.0.1-SNAPSHOT.jar
 
-#Subir aplicação no docker
+# Subir aplicação no docker
+docker run --name libraryapi-production --network library-network -d -p 54923:54923 -p 9090:9090 -e DATASOURCE_URL="jdbc:postgresql://librarydb-prod:5432/library" -e DATASOURCE_USERNAME="postgresprod" -e DATASOURCE_PASSWORD="postgresprod" -e GOOGLE_CLIENT_ID="SEU_CLIENT_ID_AQUI" -e GOOGLE_CLIENT_SECRET="SEU_CLIENT_SECRET_AQUI" kaiocandido/libraryapi
 
- docker run --name libraryapi-production --network library-network -d -p 54923:54923 -p 9090:9090 -e DATASOURCE_URL="jdbc:postgresql://librarydb-prod:5432/library" -e DATASOURCE_USERNAME="postgresprod" -e DATASOURCE_PASSWORD="postgresprod" -e GOOGLE_CLIENT_ID="SEU_CLIENT_ID_AQUI" -e GOOGLE_CLIENT_SECRET="SEU_CLIENT_SECRET_AQUI" kaiocandido/libraryapi
+# Ver logs
+docker logs libraryapi-production
