@@ -41,3 +41,7 @@ create table client (
 );
 
 http://localhost:54923/swagger-ui/index.html#/
+
+
+./mvnw clean package -DskipTests
+java -jar .\target\libraryapi-0.0.1-SNAPSHOT.jar
