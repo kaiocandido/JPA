@@ -42,6 +42,19 @@ create table client (
 
 http://localhost:54923/swagger-ui/index.html#/
 
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+insert into usuario
+(id, login, password, email, roles)
+values
+( uuid_generate_v4(), 'gerente', '$2a$12$Smsj8YiUY0mGB8I6930BfeQS6cWH6IFV6XKb70cHVWQyFvoYHhVCC', 'gerente@email.com', '{GERENTE}')
+
+insert into client
+(id, client_id, client_secret, redirect_uri, scope)
+values
+(uuid_generate_v4(), 'client-production', '$2a$12$UfYSaZtfA4QR.TdOX3GdieOJIlZaojLzd/RHsXa2xqPbVjSMcn7TO', 'http://localhost:54923/authorized', 'GERENTE')
+
+
 #Comando para buildar java
 
 ./mvnw clean package -DskipTests

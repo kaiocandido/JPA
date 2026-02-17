@@ -41,3 +41,12 @@ docker run --name libraryapi-production --network library-network -d -p 54923:54
 
 # Ver logs
 docker logs libraryapi-production
+
+# Criar tag
+docker tag kaiocandido/libraryapi kaiocandido/libraryapi
+
+# Login docker
+docker login
+
+# Push docker
+ docker push kaiocandido/libraryapi
