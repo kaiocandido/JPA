@@ -2,7 +2,7 @@
 docker run --name librarydb -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=library -p 5432:5432 postgres:16.3
 
 #Rodar pgadmin4
-docker run --name pgadmin4 -p 15432:80 -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=admin dpage/pgadmin4
+docker run --name pgadmin -p 15432:80 -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=Admin#12345 dpage/pgadmin4
 
 # Comando docker para listar container CMD
 docker ps

@@ -1,160 +1,7 @@
-2026-02-17T18:36:23.720-03:00  WARN 3356 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:36:33.280-03:00 DEBUG 3356 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T18:36:33.285-03:00 DEBUG 3356 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T18:36:36.888-03:00  WARN 3356 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T18:36:37.589-03:00 DEBUG 3356 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:36:37.732-03:00 DEBUG 3356 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:36:38.002-03:00 DEBUG 3356 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:36:41.177-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:41.180-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:41.181-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:41.182-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:41.183-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:41.184-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:41.184-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:41.391-03:00 DEBUG 3356 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:36:41.672-03:00 DEBUG 3356 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T18:36:44.128-03:00 DEBUG 3356 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:36:44.133-03:00 DEBUG 3356 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:36:44.152-03:00 DEBUG 3356 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:36:44.188-03:00 DEBUG 3356 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:36:44.568-03:00  WARN 3356 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-02-17T18:36:44.569-03:00  WARN 3356 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-02-17T18:36:47.610-03:00  WARN 3356 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:36:50.764-03:00 DEBUG 3356 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T18:36:50.764-03:00 DEBUG 3356 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T18:36:51.426-03:00  WARN 3356 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T18:36:51.559-03:00 DEBUG 3356 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:36:51.599-03:00 DEBUG 3356 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:36:51.654-03:00 DEBUG 3356 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:36:52.887-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:52.888-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:52.888-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:52.888-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:52.889-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:52.889-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:52.889-03:00  WARN 3356 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:36:52.982-03:00 DEBUG 3356 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:36:53.055-03:00 DEBUG 3356 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T18:36:53.846-03:00  WARN 3356 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-02-17T18:36:54.306-03:00 ERROR 3356 --- [libraryapi] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 54923 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 54923 or configure this application to listen on another port.
-
-2026-02-17T18:37:36.109-03:00  INFO 3356 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-17T18:37:36.111-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2026-02-17T18:37:36.112-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2026-02-17T18:37:36.112-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2026-02-17T18:37:36.128-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1d021496
-2026-02-17T18:37:36.131-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6d7232a5
-2026-02-17T18:37:36.132-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-02-17T18:37:36.135-03:00  INFO 3356 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
-2026-02-17T18:37:46.574-03:00  WARN 3356 --- [libraryapi] [http-nio-54923-exec-1] com.zaxxer.hikari.pool.PoolBase          : Library - Failed to validate connection org.postgresql.jdbc.PgConnection@7ac73e8b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-02-17T18:38:08.819-03:00  WARN 3356 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:38:08.820-03:00 ERROR 3356 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "client" does not exist
-  Posição: 84
-2026-02-17T18:38:08.985-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:38:08.990-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:38:09.724-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:38:22.852-03:00  WARN 3356 --- [libraryapi] [http-nio-54923-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:38:22.852-03:00 ERROR 3356 --- [libraryapi] [http-nio-54923-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:38:22.871-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:38:22.871-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:38:22.875-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:38:43.184-03:00  WARN 3356 --- [libraryapi] [http-nio-54923-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:38:43.184-03:00 ERROR 3356 --- [libraryapi] [http-nio-54923-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:38:43.201-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:38:43.201-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:38:43.204-03:00 DEBUG 3356 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:40:06.493-03:00  WARN 21856 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:40:12.987-03:00 DEBUG 21856 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T18:40:12.989-03:00 DEBUG 21856 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T18:40:15.875-03:00  WARN 21856 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T18:40:16.525-03:00 DEBUG 21856 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:40:16.587-03:00 DEBUG 21856 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:40:16.697-03:00 DEBUG 21856 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:40:20.156-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:20.158-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:20.159-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:20.160-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:20.160-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:20.161-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:20.162-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:20.380-03:00 DEBUG 21856 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:40:20.596-03:00 DEBUG 21856 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T18:40:22.426-03:00 DEBUG 21856 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:40:22.429-03:00 DEBUG 21856 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:40:22.444-03:00 DEBUG 21856 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:40:22.470-03:00 DEBUG 21856 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:40:22.737-03:00  WARN 21856 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-02-17T18:40:22.738-03:00  WARN 21856 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-02-17T18:40:24.197-03:00  WARN 21856 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:40:26.936-03:00 DEBUG 21856 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T18:40:26.936-03:00 DEBUG 21856 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T18:40:27.238-03:00  WARN 21856 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T18:40:27.299-03:00 DEBUG 21856 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:40:27.316-03:00 DEBUG 21856 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:40:27.336-03:00 DEBUG 21856 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:40:28.413-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:28.414-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:28.414-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:28.414-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:28.414-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:28.414-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:28.414-03:00  WARN 21856 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:40:28.476-03:00 DEBUG 21856 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:40:28.524-03:00 DEBUG 21856 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T18:40:29.045-03:00  WARN 21856 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-02-17T18:40:29.439-03:00 ERROR 21856 --- [libraryapi] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 54923 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 54923 or configure this application to listen on another port.
-
-2026-02-17T18:41:13.222-03:00  INFO 21856 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-17T18:41:13.223-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2026-02-17T18:41:13.223-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2026-02-17T18:41:13.223-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2026-02-17T18:41:13.225-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6c769cd8
-2026-02-17T18:41:13.226-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@52a3a9ef
-2026-02-17T18:41:13.226-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-02-17T18:41:13.227-03:00  INFO 21856 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2026-02-17T18:41:13.854-03:00  WARN 21856 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:41:13.855-03:00 ERROR 21856 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "client" does not exist
-  Posição: 84
-2026-02-17T18:41:13.967-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:41:13.970-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:41:14.469-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:41:20.796-03:00  WARN 21856 --- [libraryapi] [http-nio-54923-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:41:20.797-03:00 ERROR 21856 --- [libraryapi] [http-nio-54923-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:41:20.819-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:41:20.820-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:41:20.822-03:00 DEBUG 21856 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:42:28.642-03:00  WARN 28236 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:42:31.372-03:00 ERROR 28236 --- [libraryapi] [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtCustomAuthenticationFilter' defined in file [C:\Users\adm\Downloads\libraryapi\libraryapi\target\classes\oi\githubkaiocandido\libraryapi\security\JwtCustomAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuariosService' defined in file [C:\Users\adm\Downloads\libraryapi\libraryapi\target\classes\oi\githubkaiocandido\libraryapi\Service\UsuariosService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in oi.githubkaiocandido.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-2026-02-17T18:42:31.408-03:00  WARN 28236 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
-2026-02-17T18:42:31.464-03:00 ERROR 28236 --- [libraryapi] [main] o.s.boot.SpringApplication               : Application run failed
+2026-02-18T19:11:51.418-03:00  WARN 11824 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-02-18T19:11:52.677-03:00 ERROR 11824 --- [libraryapi] [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtCustomAuthenticationFilter' defined in file [C:\Users\adm\Downloads\libraryapi\libraryapi\target\classes\oi\githubkaiocandido\libraryapi\security\JwtCustomAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuariosService' defined in file [C:\Users\adm\Downloads\libraryapi\libraryapi\target\classes\oi\githubkaiocandido\libraryapi\Service\UsuariosService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in oi.githubkaiocandido.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2026-02-18T19:11:52.756-03:00  WARN 11824 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-02-18T19:11:52.842-03:00 ERROR 11824 --- [libraryapi] [main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.context.ApplicationContextException: Unable to start web server
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.4.1.jar:3.4.1]
@@ -266,7 +113,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
 	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.1.jar:6.2.1]
 	... 81 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'hikariDataSource' defined in class path resource [oi/githubkaiocandido/libraryapi/config/DataBaseConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDataSource' threw exception with message: Failed to initialize pool: FATAL: database "libraryapi-databse" does not exist
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'hikariDataSource' defined in class path resource [oi/githubkaiocandido/libraryapi/config/DataBaseConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDataSource' threw exception with message: Failed to initialize pool: Connection to localhost:5482 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.1.jar:6.2.1]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.1.jar:6.2.1]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
@@ -281,7 +128,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
 	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.1.jar:6.2.1]
 	... 93 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariDataSource' defined in class path resource [oi/githubkaiocandido/libraryapi/config/DataBaseConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDataSource' threw exception with message: Failed to initialize pool: FATAL: database "libraryapi-databse" does not exist
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariDataSource' defined in class path resource [oi/githubkaiocandido/libraryapi/config/DataBaseConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDataSource' threw exception with message: Failed to initialize pool: Connection to localhost:5482 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.1.jar:6.2.1]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489) ~[spring-beans-6.2.1.jar:6.2.1]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
@@ -298,13 +145,13 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.1.jar:6.2.1]
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.1.jar:6.2.1]
 	... 105 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDataSource' threw exception with message: Failed to initialize pool: FATAL: database "libraryapi-databse" does not exist
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDataSource' threw exception with message: Failed to initialize pool: Connection to localhost:5482 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.1.jar:6.2.1]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.1.jar:6.2.1]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.1.jar:6.2.1]
 	... 119 common frames omitted
-Caused by: com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: FATAL: database "libraryapi-databse" does not exist
+Caused by: com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Connection to localhost:5482 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
 	at com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:584) ~[HikariCP-5.1.0.jar:na]
 	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571) ~[HikariCP-5.1.0.jar:na]
 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
@@ -319,11 +166,8 @@ Caused by: com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.1.jar:6.2.1]
 	... 122 common frames omitted
-Caused by: org.postgresql.util.PSQLException: FATAL: database "libraryapi-databse" does not exist
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2734) ~[postgresql-42.7.7.jar:42.7.7]
-	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2859) ~[postgresql-42.7.7.jar:42.7.7]
-	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:178) ~[postgresql-42.7.7.jar:42.7.7]
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:344) ~[postgresql-42.7.7.jar:42.7.7]
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:5482 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:373) ~[postgresql-42.7.7.jar:42.7.7]
 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.7.jar:42.7.7]
 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:277) ~[postgresql-42.7.7.jar:42.7.7]
 	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.7.jar:42.7.7]
@@ -334,135 +178,59 @@ Caused by: org.postgresql.util.PSQLException: FATAL: database "libraryapi-databs
 	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
 	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
 	... 133 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:261) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:122) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:146) ~[postgresql-42.7.7.jar:42.7.7]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:289) ~[postgresql-42.7.7.jar:42.7.7]
+	... 142 common frames omitted
 
-2026-02-17T18:43:07.255-03:00  WARN 10604 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:43:15.752-03:00 DEBUG 10604 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T18:43:15.754-03:00 DEBUG 10604 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T18:43:18.507-03:00  WARN 10604 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T18:43:18.913-03:00 DEBUG 10604 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:43:18.967-03:00 DEBUG 10604 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:43:19.080-03:00 DEBUG 10604 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:43:21.240-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:21.241-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:21.242-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:21.242-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:21.243-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:21.244-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:21.244-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:21.390-03:00 DEBUG 10604 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:43:21.558-03:00 DEBUG 10604 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T18:43:22.852-03:00 DEBUG 10604 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:43:22.855-03:00 DEBUG 10604 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:43:22.864-03:00 DEBUG 10604 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:43:22.882-03:00 DEBUG 10604 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:43:23.075-03:00  WARN 10604 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-02-17T18:43:23.075-03:00  WARN 10604 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-02-17T18:43:25.009-03:00  WARN 10604 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:43:28.320-03:00 DEBUG 10604 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T18:43:28.321-03:00 DEBUG 10604 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T18:43:28.831-03:00  WARN 10604 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T18:43:28.959-03:00 DEBUG 10604 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:43:28.982-03:00 DEBUG 10604 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:43:29.018-03:00 DEBUG 10604 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:43:29.822-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:29.822-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:29.822-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:29.822-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:29.823-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:29.823-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:29.823-03:00  WARN 10604 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:43:29.877-03:00 DEBUG 10604 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:43:29.929-03:00 DEBUG 10604 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T18:43:30.382-03:00  WARN 10604 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-02-17T18:43:30.844-03:00 ERROR 10604 --- [libraryapi] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 54923 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 54923 or configure this application to listen on another port.
-
-2026-02-17T18:45:11.455-03:00  INFO 10604 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-17T18:45:11.456-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2026-02-17T18:45:11.457-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2026-02-17T18:45:11.457-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2026-02-17T18:45:11.459-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@642ef710
-2026-02-17T18:45:11.460-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3e57d25c
-2026-02-17T18:45:11.461-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-02-17T18:45:11.462-03:00  INFO 10604 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2026-02-17T18:45:12.098-03:00  WARN 10604 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:45:12.098-03:00 ERROR 10604 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "client" does not exist
-  Posição: 84
-2026-02-17T18:45:12.239-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:45:12.243-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:45:12.829-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:45:18.031-03:00  WARN 10604 --- [libraryapi] [http-nio-54923-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:45:18.031-03:00 ERROR 10604 --- [libraryapi] [http-nio-54923-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:45:18.048-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:45:18.049-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:45:18.053-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:46:05.070-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.client.RestTemplate              : HTTP POST https://www.googleapis.com/oauth2/v4/token
-2026-02-17T18:46:05.073-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
-2026-02-17T18:46:05.074-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.client.RestTemplate              : Writing [{grant_type=[authorization_code], code=[4/0AfrIepDXHKBaAWxsX8ebHhZizavyG2TRwM2-xhthXM1l5JfKtJn9FZ61EC7PDmCZZ6f0CA], redirect_uri=[http://localhost:54923/login/oauth2/code/google]}] as "application/x-www-form-urlencoded;charset=UTF-8"
-2026-02-17T18:46:05.517-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.client.RestTemplate              : Response 200 OK
-2026-02-17T18:46:05.519-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.client.RestTemplate              : Reading to [org.springframework.security.oauth2.core.endpoint.OAuth2AccessTokenResponse] as "application/json;charset=utf-8"
-2026-02-17T18:46:05.636-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.client.RestTemplate              : HTTP GET https://www.googleapis.com/oauth2/v3/certs
-2026-02-17T18:46:05.639-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.client.RestTemplate              : Accept=[text/plain, application/json, application/yaml, application/*+json, */*]
-2026-02-17T18:46:05.678-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.client.RestTemplate              : Response 200 OK
-2026-02-17T18:46:05.680-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.client.RestTemplate              : Reading to [java.lang.String] as "application/json;charset=UTF-8"
-2026-02-17T18:46:06.043-03:00  WARN 10604 --- [libraryapi] [http-nio-54923-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:46:06.044-03:00 ERROR 10604 --- [libraryapi] [http-nio-54923-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:46:06.048-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?state=z_SbiTfMiCIz2RkQuScXm2091n51FR6C3if_y_1imVo%3D&code=4%2F0AfrIepDXHKBaAWxsX8ebHhZizavyG2TRwM2-xhthXM1l5JfKtJn9FZ61EC7PDmCZZ6f0CA&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=consent", parameters={masked}
-2026-02-17T18:46:06.049-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
-2026-02-17T18:46:06.079-03:00 DEBUG 10604 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
-2026-02-17T18:49:10.984-03:00  WARN 14528 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:49:19.672-03:00 DEBUG 14528 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T18:49:19.675-03:00 DEBUG 14528 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T18:49:22.694-03:00  WARN 14528 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T18:49:23.826-03:00 DEBUG 14528 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:49:23.999-03:00 DEBUG 14528 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:49:24.323-03:00 DEBUG 14528 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:49:27.576-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:27.577-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:27.578-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:27.578-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:27.580-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:27.581-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:27.582-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:27.769-03:00 DEBUG 14528 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:49:27.970-03:00 DEBUG 14528 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T18:49:30.280-03:00 DEBUG 14528 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:49:30.286-03:00 DEBUG 14528 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:49:30.299-03:00 DEBUG 14528 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:49:30.330-03:00 DEBUG 14528 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:49:30.634-03:00  WARN 14528 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-02-17T18:49:30.635-03:00  WARN 14528 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-02-17T18:49:32.417-03:00  WARN 14528 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:49:36.624-03:00 DEBUG 14528 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T18:49:36.625-03:00 DEBUG 14528 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T18:49:36.946-03:00  WARN 14528 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T18:49:37.074-03:00 DEBUG 14528 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:49:37.107-03:00 DEBUG 14528 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:49:37.148-03:00 DEBUG 14528 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:49:38.464-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:38.465-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:38.466-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:38.467-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:38.468-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:38.468-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:38.468-03:00  WARN 14528 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:49:38.608-03:00 DEBUG 14528 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:49:38.669-03:00 DEBUG 14528 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T18:49:39.341-03:00  WARN 14528 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-02-17T18:49:39.852-03:00 ERROR 14528 --- [libraryapi] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2026-02-18T19:12:27.701-03:00  WARN 1240 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-02-18T19:12:37.775-03:00 DEBUG 1240 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-02-18T19:12:37.787-03:00 DEBUG 1240 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-02-18T19:12:41.281-03:00  WARN 1240 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-18T19:12:41.966-03:00 DEBUG 1240 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2026-02-18T19:12:42.081-03:00 DEBUG 1240 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-02-18T19:12:42.188-03:00 DEBUG 1240 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-02-18T19:12:45.062-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:45.063-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:45.065-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:45.066-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:45.067-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:45.068-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:45.068-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:45.390-03:00 DEBUG 1240 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-18T19:12:45.788-03:00 DEBUG 1240 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-18T19:12:49.209-03:00 DEBUG 1240 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
+2026-02-18T19:12:49.212-03:00 DEBUG 1240 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-02-18T19:12:49.230-03:00 DEBUG 1240 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-02-18T19:12:49.258-03:00 DEBUG 1240 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-18T19:12:49.946-03:00  WARN 1240 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-02-18T19:12:49.948-03:00  WARN 1240 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-02-18T19:12:52.663-03:00  WARN 1240 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-02-18T19:12:53.555-03:00 DEBUG 1240 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-02-18T19:12:53.555-03:00 DEBUG 1240 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-02-18T19:12:54.775-03:00  WARN 1240 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-18T19:12:55.139-03:00 DEBUG 1240 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2026-02-18T19:12:55.174-03:00 DEBUG 1240 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-02-18T19:12:55.228-03:00 DEBUG 1240 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-02-18T19:12:56.109-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:56.109-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:56.109-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:56.109-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:56.109-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:56.110-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:56.110-03:00  WARN 1240 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:12:56.190-03:00 DEBUG 1240 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-18T19:12:56.406-03:00 DEBUG 1240 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-18T19:12:57.647-03:00  WARN 1240 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-02-18T19:12:57.843-03:00 ERROR 1240 --- [libraryapi] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -476,101 +244,57 @@ Action:
 
 Identify and stop the process that's listening on port 54923 or configure this application to listen on another port.
 
-2026-02-17T18:49:57.311-03:00  INFO 14528 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-17T18:49:57.312-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2026-02-17T18:49:57.313-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2026-02-17T18:49:57.314-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2026-02-17T18:49:57.316-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@8d1b425
-2026-02-17T18:49:57.318-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@55940257
-2026-02-17T18:49:57.318-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-02-17T18:49:57.319-03:00  INFO 14528 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2026-02-17T18:49:58.952-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:49:58.952-03:00 ERROR 14528 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "client" does not exist
-  Posição: 84
-2026-02-17T18:49:59.166-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:49:59.170-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:49:59.787-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:50:44.166-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:50:44.166-03:00 ERROR 14528 --- [libraryapi] [http-nio-54923-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:50:44.178-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:50:44.178-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:50:44.181-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:56:26.308-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-7] com.zaxxer.hikari.pool.PoolBase          : Library - Failed to validate connection org.postgresql.jdbc.PgConnection@2de72fa9 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-02-17T18:56:36.320-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-7] com.zaxxer.hikari.pool.PoolBase          : Library - Failed to validate connection org.postgresql.jdbc.PgConnection@55194eb7 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-02-17T18:56:36.652-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:56:36.652-03:00 ERROR 14528 --- [libraryapi] [http-nio-54923-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "client" does not exist
-  Posição: 84
-2026-02-17T18:56:36.663-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:56:36.663-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:56:36.667-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:56:51.546-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:56:51.547-03:00 ERROR 14528 --- [libraryapi] [http-nio-54923-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "client" does not exist
-  Posição: 84
-2026-02-17T18:56:51.555-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:56:51.556-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:56:51.558-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:57:11.766-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:57:11.768-03:00 ERROR 14528 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:57:15.818-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:57:15.818-03:00 ERROR 14528 --- [libraryapi] [http-nio-54923-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:57:15.886-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:57:15.886-03:00 ERROR 14528 --- [libraryapi] [http-nio-54923-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:57:19.584-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:57:19.585-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:57:19.585-03:00 ERROR 14528 --- [libraryapi] [http-nio-54923-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:57:19.585-03:00 ERROR 14528 --- [libraryapi] [http-nio-54923-exec-3] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:57:20.551-03:00  WARN 14528 --- [libraryapi] [http-nio-54923-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T18:57:20.551-03:00 ERROR 14528 --- [libraryapi] [http-nio-54923-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T18:57:20.560-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T18:57:20.561-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T18:57:20.563-03:00 DEBUG 14528 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T18:59:02.522-03:00  WARN 24000 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:59:10.441-03:00 DEBUG 24000 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T18:59:10.443-03:00 DEBUG 24000 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T18:59:12.457-03:00  WARN 24000 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T18:59:12.792-03:00 DEBUG 24000 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:59:12.841-03:00 DEBUG 24000 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:59:12.909-03:00 DEBUG 24000 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:59:15.378-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:15.379-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:15.379-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:15.380-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:15.380-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:15.381-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:15.381-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:15.581-03:00 DEBUG 24000 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:59:15.756-03:00 DEBUG 24000 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T18:59:17.241-03:00 DEBUG 24000 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:59:17.244-03:00 DEBUG 24000 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:59:17.254-03:00 DEBUG 24000 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:59:17.272-03:00 DEBUG 24000 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:59:17.457-03:00  WARN 24000 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-02-17T18:59:17.457-03:00  WARN 24000 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-02-17T18:59:18.565-03:00  WARN 24000 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T18:59:21.440-03:00 DEBUG 24000 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T18:59:21.441-03:00 DEBUG 24000 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T18:59:21.691-03:00  WARN 24000 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T18:59:21.783-03:00 DEBUG 24000 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T18:59:21.815-03:00 DEBUG 24000 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T18:59:21.843-03:00 DEBUG 24000 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T18:59:22.423-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:22.423-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:22.424-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:22.424-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:22.424-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:22.424-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:22.424-03:00  WARN 24000 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T18:59:22.465-03:00 DEBUG 24000 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T18:59:22.501-03:00 DEBUG 24000 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T18:59:22.983-03:00  WARN 24000 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-02-17T18:59:23.362-03:00 ERROR 24000 --- [libraryapi] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2026-02-18T19:38:30.147-03:00  INFO 1240 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-18T19:38:30.156-03:00 DEBUG 1240 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-02-18T19:38:30.157-03:00 DEBUG 1240 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-02-18T19:38:30.159-03:00 DEBUG 1240 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-02-18T19:38:30.198-03:00 DEBUG 1240 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1bba5848
+2026-02-18T19:38:30.200-03:00 DEBUG 1240 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@27b8daa1
+2026-02-18T19:38:30.201-03:00 DEBUG 1240 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-02-18T19:38:30.202-03:00  INFO 1240 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 48 ms
+2026-02-18T19:38:31.233-03:00 DEBUG 1240 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2026-02-18T19:38:31.237-03:00 DEBUG 1240 --- [libraryapi] [http-nio-54923-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
+2026-02-18T19:38:31.984-03:00 DEBUG 1240 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:39:21.499-03:00  WARN 4536 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-02-18T19:39:27.912-03:00 DEBUG 4536 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-02-18T19:39:27.920-03:00 DEBUG 4536 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-02-18T19:39:30.417-03:00  WARN 4536 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-18T19:39:30.899-03:00 DEBUG 4536 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2026-02-18T19:39:30.944-03:00 DEBUG 4536 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-02-18T19:39:31.020-03:00 DEBUG 4536 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-02-18T19:39:33.534-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:33.535-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:33.536-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:33.536-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:33.536-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:33.536-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:33.537-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:33.725-03:00 DEBUG 4536 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-18T19:39:33.981-03:00 DEBUG 4536 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-18T19:39:35.583-03:00 DEBUG 4536 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
+2026-02-18T19:39:35.586-03:00 DEBUG 4536 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-02-18T19:39:35.596-03:00 DEBUG 4536 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-02-18T19:39:35.611-03:00 DEBUG 4536 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-18T19:39:35.904-03:00  WARN 4536 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-02-18T19:39:35.906-03:00  WARN 4536 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-02-18T19:39:37.724-03:00  WARN 4536 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
+2026-02-18T19:39:38.394-03:00 DEBUG 4536 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-02-18T19:39:38.395-03:00 DEBUG 4536 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2026-02-18T19:39:38.977-03:00  WARN 4536 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-18T19:39:39.098-03:00 DEBUG 4536 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
+2026-02-18T19:39:39.127-03:00 DEBUG 4536 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
+2026-02-18T19:39:39.171-03:00 DEBUG 4536 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-02-18T19:39:39.890-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:39.891-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:39.891-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:39.891-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:39.891-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:39.892-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:39.892-03:00  WARN 4536 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2026-02-18T19:39:39.947-03:00 DEBUG 4536 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-18T19:39:39.989-03:00 DEBUG 4536 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-18T19:39:40.604-03:00  WARN 4536 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-02-18T19:39:40.701-03:00 ERROR 4536 --- [libraryapi] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -584,298 +308,136 @@ Action:
 
 Identify and stop the process that's listening on port 54923 or configure this application to listen on another port.
 
-2026-02-17T19:00:57.927-03:00  INFO 24000 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-17T19:00:57.929-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2026-02-17T19:00:57.930-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2026-02-17T19:00:57.930-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2026-02-17T19:00:57.932-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@56fe2233
-2026-02-17T19:00:57.933-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@451f5e53
-2026-02-17T19:00:57.933-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-02-17T19:00:57.933-03:00  INFO 24000 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2026-02-17T19:00:58.620-03:00  WARN 24000 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T19:00:58.621-03:00 ERROR 24000 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "client" does not exist
-  Posição: 84
-2026-02-17T19:00:58.816-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T19:00:58.822-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T19:00:59.363-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T19:02:42.620-03:00  WARN 24000 --- [libraryapi] [http-nio-54923-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T19:02:42.620-03:00 ERROR 24000 --- [libraryapi] [http-nio-54923-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T19:02:42.630-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T19:02:42.631-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T19:02:42.633-03:00 DEBUG 24000 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T19:06:53.859-03:00  WARN 1568 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T19:06:56.752-03:00 ERROR 1568 --- [libraryapi] [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtCustomAuthenticationFilter' defined in file [C:\Users\adm\Downloads\libraryapi\libraryapi\target\classes\oi\githubkaiocandido\libraryapi\security\JwtCustomAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuariosService' defined in file [C:\Users\adm\Downloads\libraryapi\libraryapi\target\classes\oi\githubkaiocandido\libraryapi\Service\UsuariosService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in oi.githubkaiocandido.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-2026-02-17T19:06:56.789-03:00  WARN 1568 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
-2026-02-17T19:06:56.831-03:00 ERROR 1568 --- [libraryapi] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.context.ApplicationContextException: Unable to start web server
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.1.jar:6.2.1]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
-	at oi.githubkaiocandido.libraryapi.Application.main(Application.java:14) ~[classes/:na]
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.4.1.jar:3.4.1]
-	... 8 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtCustomAuthenticationFilter' defined in file [C:\Users\adm\Downloads\libraryapi\libraryapi\target\classes\oi\githubkaiocandido\libraryapi\security\JwtCustomAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuariosService' defined in file [C:\Users\adm\Downloads\libraryapi\libraryapi\target\classes\oi\githubkaiocandido\libraryapi\Service\UsuariosService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in oi.githubkaiocandido.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4426) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.4.1.jar:3.4.1]
-	... 13 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'usuariosService' defined in file [C:\Users\adm\Downloads\libraryapi\libraryapi\target\classes\oi\githubkaiocandido\libraryapi\Service\UsuariosService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'usuarioRepository' defined in oi.githubkaiocandido.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1377) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.1.jar:6.2.1]
-	... 54 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'usuarioRepository' defined in oi.githubkaiocandido.libraryapi.repository.UsuarioRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1456) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.1.jar:6.2.1]
-	... 67 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.1.jar:6.2.1]
-	... 81 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'hikariDataSource' defined in class path resource [oi/githubkaiocandido/libraryapi/config/DataBaseConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDataSource' threw exception with message: Failed to initialize pool: FATAL: database "libraryapi-databse" does not exist
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.1.jar:6.2.1]
-	... 93 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'hikariDataSource' defined in class path resource [oi/githubkaiocandido/libraryapi/config/DataBaseConfiguration.class]: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDataSource' threw exception with message: Failed to initialize pool: FATAL: database "libraryapi-databse" does not exist
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1187) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1631) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.1.jar:6.2.1]
-	... 105 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'hikariDataSource' threw exception with message: Failed to initialize pool: FATAL: database "libraryapi-databse" does not exist
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.1.jar:6.2.1]
-	... 119 common frames omitted
-Caused by: com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: FATAL: database "libraryapi-databse" does not exist
-	at com.zaxxer.hikari.pool.HikariPool.throwPoolInitializationException(HikariPool.java:584) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:571) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.<init>(HikariDataSource.java:80) ~[HikariCP-5.1.0.jar:na]
-	at oi.githubkaiocandido.libraryapi.config.DataBaseConfiguration.hikariDataSource(DataBaseConfiguration.java:42) ~[classes/:na]
-	at oi.githubkaiocandido.libraryapi.config.DataBaseConfiguration$$SpringCGLIB$$0.CGLIB$hikariDataSource$0(<generated>) ~[classes/:na]
-	at oi.githubkaiocandido.libraryapi.config.DataBaseConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.2.1.jar:6.2.1]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:348) ~[spring-context-6.2.1.jar:6.2.1]
-	at oi.githubkaiocandido.libraryapi.config.DataBaseConfiguration$$SpringCGLIB$$0.hikariDataSource(<generated>) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.1.jar:6.2.1]
-	... 122 common frames omitted
-Caused by: org.postgresql.util.PSQLException: FATAL: database "libraryapi-databse" does not exist
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2734) ~[postgresql-42.7.7.jar:42.7.7]
-	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2859) ~[postgresql-42.7.7.jar:42.7.7]
-	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:178) ~[postgresql-42.7.7.jar:42.7.7]
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:344) ~[postgresql-42.7.7.jar:42.7.7]
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.7.jar:42.7.7]
-	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:277) ~[postgresql-42.7.7.jar:42.7.7]
-	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.7.jar:42.7.7]
-	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.7.jar:42.7.7]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
-	... 133 common frames omitted
-
-2026-02-17T19:08:34.586-03:00  WARN 13800 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T19:08:44.162-03:00 DEBUG 13800 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T19:08:44.167-03:00 DEBUG 13800 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T19:08:49.342-03:00  WARN 13800 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T19:08:50.131-03:00 DEBUG 13800 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T19:08:50.212-03:00 DEBUG 13800 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T19:08:50.758-03:00 DEBUG 13800 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T19:08:53.243-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:08:53.248-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:08:53.257-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:08:53.262-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:08:53.282-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:08:53.283-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:08:53.283-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:08:53.600-03:00 DEBUG 13800 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T19:08:53.856-03:00 DEBUG 13800 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T19:08:56.617-03:00 DEBUG 13800 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 1 mappings in 'requestMappingHandlerMapping'
-2026-02-17T19:08:56.621-03:00 DEBUG 13800 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T19:08:56.642-03:00 DEBUG 13800 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T19:08:56.677-03:00 DEBUG 13800 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T19:08:57.045-03:00  WARN 13800 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-02-17T19:08:57.047-03:00  WARN 13800 --- [libraryapi] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-02-17T19:08:59.373-03:00  WARN 13800 --- [libraryapi] [main] com.zaxxer.hikari.HikariConfig           : Library - idleTimeout is close to or more than maxLifetime, disabling it.
-2026-02-17T19:09:02.470-03:00 DEBUG 13800 --- [libraryapi] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-02-17T19:09:02.471-03:00 DEBUG 13800 --- [libraryapi] [main] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2026-02-17T19:09:02.906-03:00  WARN 13800 --- [libraryapi] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-02-17T19:09:03.130-03:00 DEBUG 13800 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-02-17T19:09:03.172-03:00 DEBUG 13800 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/login] in 'viewControllerHandlerMapping'
-2026-02-17T19:09:03.215-03:00 DEBUG 13800 --- [libraryapi] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-02-17T19:09:04.569-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v2/api-docs/**'], Ant [pattern='/v2/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:09:04.570-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/v3/api-docs/**'], Ant [pattern='/v3/api-docs/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:09:04.571-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-resources/**'], Ant [pattern='/swagger-resources/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:09:04.571-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui.html'], Ant [pattern='/swagger-ui.html']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:09:04.571-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/swagger-ui/**'], Ant [pattern='/swagger-ui/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:09:04.572-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/webjars/**'], Ant [pattern='/webjars/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:09:04.572-03:00  WARN 13800 --- [libraryapi] [main] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Deferred [Mvc [pattern='/actuator/**'], Ant [pattern='/actuator/**']]. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2026-02-17T19:09:04.678-03:00 DEBUG 13800 --- [libraryapi] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-02-17T19:09:04.819-03:00 DEBUG 13800 --- [libraryapi] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-02-17T19:09:05.417-03:00  WARN 13800 --- [libraryapi] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2026-02-17T19:09:05.666-03:00 ERROR 13800 --- [libraryapi] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 54923 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 54923 or configure this application to listen on another port.
-
-2026-02-17T19:10:49.468-03:00  INFO 13800 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-17T19:10:49.469-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2026-02-17T19:10:49.471-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2026-02-17T19:10:49.472-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2026-02-17T19:10:49.477-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@62cb645d
-2026-02-17T19:10:49.478-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2da2bc89
-2026-02-17T19:10:49.483-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-02-17T19:10:49.484-03:00  INFO 13800 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2026-02-17T19:10:50.285-03:00  WARN 13800 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T19:10:50.286-03:00 ERROR 13800 --- [libraryapi] [http-nio-54923-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "client" does not exist
-  Posição: 84
-2026-02-17T19:10:50.479-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T19:10:50.484-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T19:10:51.159-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T19:11:22.491-03:00  WARN 13800 --- [libraryapi] [http-nio-54923-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T19:11:22.491-03:00 ERROR 13800 --- [libraryapi] [http-nio-54923-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T19:11:22.510-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T19:11:22.511-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T19:11:22.518-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T19:11:36.393-03:00  WARN 13800 --- [libraryapi] [http-nio-54923-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T19:11:36.395-03:00 ERROR 13800 --- [libraryapi] [http-nio-54923-exec-6] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T19:11:36.413-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T19:11:36.414-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T19:11:36.417-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T19:11:59.370-03:00  WARN 13800 --- [libraryapi] [http-nio-54923-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T19:11:59.371-03:00 ERROR 13800 --- [libraryapi] [http-nio-54923-exec-7] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "client" does not exist
-  Posição: 84
-2026-02-17T19:11:59.388-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T19:11:59.389-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T19:11:59.392-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-02-17T19:12:06.976-03:00  WARN 13800 --- [libraryapi] [http-nio-54923-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 42P01
-2026-02-17T19:12:06.976-03:00 ERROR 13800 --- [libraryapi] [http-nio-54923-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: relation "usuario" does not exist
-  Posição: 68
-2026-02-17T19:12:06.986-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
-2026-02-17T19:12:06.986-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
-2026-02-17T19:12:06.988-03:00 DEBUG 13800 --- [libraryapi] [http-nio-54923-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:40:21.063-03:00  INFO 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-18T19:40:21.064-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-02-18T19:40:21.064-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-02-18T19:40:21.064-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-02-18T19:40:21.066-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@348c2548
+2026-02-18T19:40:21.067-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@d5f3118
+2026-02-18T19:40:21.070-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-02-18T19:40:21.071-03:00  INFO 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2026-02-18T19:40:21.145-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
+2026-02-18T19:40:21.149-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-02-18T19:40:21.228-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:40:21.314-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui.css", parameters={}
+2026-02-18T19:40:21.319-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-02-18T19:40:21.327-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-02-18T19:40:21.328-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2026-02-18T19:40:21.328-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-02-18T19:40:21.350-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2026-02-18T19:40:21.353-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-02-18T19:40:21.362-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.css", parameters={}
+2026-02-18T19:40:21.365-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-02-18T19:40:21.363-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2026-02-18T19:40:21.374-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2026-02-18T19:40:21.367-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-02-18T19:40:21.409-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2026-02-18T19:40:21.413-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2026-02-18T19:40:21.584-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:40:23.141-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
+2026-02-18T19:40:23.142-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-02-18T19:40:23.175-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2026-02-18T19:40:23.211-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:54923/swagger-ui/oauth2-r (truncated)...]
+2026-02-18T19:40:23.219-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:40:23.238-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2026-02-18T19:40:23.239-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-02-18T19:40:24.354-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-02-18T19:40:24.361-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 49, 46, 48, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-02-18T19:40:24.370-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.w.s.handler.DisconnectedClient       : Looks like the client has gone away: org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.io.IOException: Uma conexão estabelecida foi anulada pelo software no computador host (For a full stack trace, set the log category 'org.apache.commons.logging.LogAdapter$Slf4jLocationAwareLog@566c2268' to TRACE level.)
+2026-02-18T19:40:24.370-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:40:24.653-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
+2026-02-18T19:40:24.655-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-02-18T19:40:24.659-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2026-02-18T19:40:24.733-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-02-18T19:40:24.735-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-02-18T19:40:24.765-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:40:24.966-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/favicon-32x32.png", parameters={}
+2026-02-18T19:40:24.975-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-02-18T19:40:24.978-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2026-02-18T19:40:24.988-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
+2026-02-18T19:40:24.990-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-02-18T19:40:24.993-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2026-02-18T19:40:24.994-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:54923/swagger-ui/oauth2-r (truncated)...]
+2026-02-18T19:40:24.996-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:40:25.029-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2026-02-18T19:40:25.030-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-02-18T19:40:25.065-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-02-18T19:40:25.072-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 49, 46, 48, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-02-18T19:40:25.075-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:40:49.275-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2026-02-18T19:40:49.277-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
+2026-02-18T19:40:49.781-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:40:55.865-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/authorized?code=4ISuqSi6rYXK4rdpvfda1dy2SgExFiinYWra2-Ui0uSSoFMhldwOfg8vGhu0qUTv5jJ__Baclxtn2otEQ5RpJREYbgwg6fmz_JJ3fEqV388A_f4q6ZA4WEQVTW2d477N", parameters={masked}
+2026-02-18T19:40:55.872-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to oi.githubkaiocandido.libraryapi.controller.LoginController#getAuthorizationCode(String)
+2026-02-18T19:40:55.881-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [text/plain, */*, application/json, application/*+json, application/yaml]
+2026-02-18T19:40:55.882-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing ["seu authorization code 4ISuqSi6rYXK4rdpvfda1dy2SgExFiinYWra2-Ui0uSSoFMhldwOfg8vGhu0qUTv5jJ__Baclxtn2 (truncated)..."]
+2026-02-18T19:40:55.889-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:46:55.974-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-02-18T19:46:56.015-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-02-18T19:46:56.630-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:46:57.157-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2026-02-18T19:46:57.159-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-02-18T19:46:57.204-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-02-18T19:46:57.223-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 49, 46, 48, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-02-18T19:46:57.230-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:52:45.454-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2026-02-18T19:52:45.461-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
+2026-02-18T19:52:45.507-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:54:00.770-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2026-02-18T19:54:00.771-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
+2026-02-18T19:54:00.803-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:54:09.089-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/authorized?code=PB11-fuFryfO-RXPkZLCvnaeiTCUPt_krEBt0yI4wPu-77AejYO-XbWmcO-oSa-e6A__VQrpK7VfYi9618TTIHeQEq8LhEiHZ7zM4R6IIaQw-r2EfKXj02VCOQxb6wn2", parameters={masked}
+2026-02-18T19:54:09.099-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to oi.githubkaiocandido.libraryapi.controller.LoginController#getAuthorizationCode(String)
+2026-02-18T19:54:09.121-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [text/plain, */*, application/json, application/*+json, application/yaml]
+2026-02-18T19:54:09.131-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing ["seu authorization code PB11-fuFryfO-RXPkZLCvnaeiTCUPt_krEBt0yI4wPu-77AejYO-XbWmcO-oSa-e6A__VQrpK7VfY (truncated)..."]
+2026-02-18T19:54:09.152-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:54:41.294-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/livros", parameters={}
+2026-02-18T19:54:41.294-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to oi.githubkaiocandido.libraryapi.controller.LivroController#salvar(CadastroLivroDTO)
+2026-02-18T19:54:41.361-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CadastroLivroDTO[isbn=string, titulo=string, dataPublicacao=2026-02-18, genero=FICCAO, preco=0, idAu (truncated)...]
+2026-02-18T19:54:42.067-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler oi.githubkaiocandido.libraryapi.controller.common.globalExceptionHandler#handleMethodArgumentNotValidException(MethodArgumentNotValidException)
+2026-02-18T19:54:42.074-03:00 ERROR 4536 --- [libraryapi] [http-nio-54923-exec-6] o.g.l.c.common.globalExceptionHandler    : Erro de validação Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> oi.githubkaiocandido.libraryapi.controller.LivroController.salvar(oi.githubkaiocandido.libraryapi.controller.dto.CadastroLivroDTO) with 2 errors: [Field error in object 'cadastroLivroDTO' on field 'isbn': rejected value [string]; codes [ISBN.cadastroLivroDTO.isbn,ISBN.isbn,ISBN.java.lang.String,ISBN]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cadastroLivroDTO.isbn,isbn]; arguments []; default message [isbn],ISBN_13]; default message [ISBN inválido]] [Field error in object 'cadastroLivroDTO' on field 'dataPublicacao': rejected value [2026-02-18]; codes [Past.cadastroLivroDTO.dataPublicacao,Past.dataPublicacao,Past.java.time.LocalDate,Past]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cadastroLivroDTO.dataPublicacao,dataPublicacao]; arguments []; default message [dataPublicacao]]; default message [Não pode ser uma data futura]] 
+2026-02-18T19:54:42.137-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-02-18T19:54:42.168-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [ErroResposta[status=422, msg=Erro validação, erros=[ErrorCampo[campo=isbn, erro=ISBN inválido], Erro (truncated)...]
+2026-02-18T19:54:42.181-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> oi.githubkaiocandido.libraryapi.controller.LivroController.salvar(oi.githubkaiocandido.libraryapi.controller.dto.CadastroLivroDTO) with 2 errors: [Field error in object 'cadastroLivroDTO' on field 'isbn': rejected value [string]; codes [ISBN.cadastroLivroDTO.isbn,ISBN.isbn,ISBN.java.lang.String,ISBN]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cadastroLivroDTO.isbn,isbn]; arguments []; default message [isbn],ISBN_13]; default message [ISBN inválido]] [Field error in object 'cadastroLivroDTO' on field 'dataPublicacao': rejected value [2026-02-18]; codes [Past.cadastroLivroDTO.dataPublicacao,Past.dataPublicacao,Past.java.time.LocalDate,Past]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cadastroLivroDTO.dataPublicacao,dataPublicacao]; arguments []; default message [dataPublicacao]]; default message [Não pode ser uma data futura]] ]
+2026-02-18T19:54:42.182-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 422 UNPROCESSABLE_ENTITY
+2026-02-18T19:55:12.465-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/autores", parameters={}
+2026-02-18T19:55:12.466-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to oi.githubkaiocandido.libraryapi.controller.AutorController#salvar(AutorDTO)
+2026-02-18T19:55:12.505-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AutorDTO[id=3fa85f64-5717-4562-b3fc-2c963f66afa6, nome=teste, dataNascimento=2026-02-18, nascionalid (truncated)...]
+2026-02-18T19:55:12.600-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler oi.githubkaiocandido.libraryapi.controller.common.globalExceptionHandler#handleMethodArgumentNotValidException(MethodArgumentNotValidException)
+2026-02-18T19:55:12.604-03:00 ERROR 4536 --- [libraryapi] [http-nio-54923-exec-5] o.g.l.c.common.globalExceptionHandler    : Erro de validação Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> oi.githubkaiocandido.libraryapi.controller.AutorController.salvar(oi.githubkaiocandido.libraryapi.controller.dto.AutorDTO): [Field error in object 'autorDTO' on field 'dataNascimento': rejected value [2026-02-18]; codes [Past.autorDTO.dataNascimento,Past.dataNascimento,Past.java.time.LocalDate,Past]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [autorDTO.dataNascimento,dataNascimento]; arguments []; default message [dataNascimento]]; default message [Não pode ser uma data futura]] 
+2026-02-18T19:55:12.606-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-02-18T19:55:12.607-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ErroResposta[status=422, msg=Erro validação, erros=[ErrorCampo[campo=dataNascimento, erro=Não pode s (truncated)...]
+2026-02-18T19:55:12.613-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Object> oi.githubkaiocandido.libraryapi.controller.AutorController.salvar(oi.githubkaiocandido.libraryapi.controller.dto.AutorDTO): [Field error in object 'autorDTO' on field 'dataNascimento': rejected value [2026-02-18]; codes [Past.autorDTO.dataNascimento,Past.dataNascimento,Past.java.time.LocalDate,Past]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [autorDTO.dataNascimento,dataNascimento]; arguments []; default message [dataNascimento]]; default message [Não pode ser uma data futura]] ]
+2026-02-18T19:55:12.615-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 422 UNPROCESSABLE_ENTITY
+2026-02-18T19:56:52.318-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/autores", parameters={}
+2026-02-18T19:56:52.320-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to oi.githubkaiocandido.libraryapi.controller.AutorController#salvar(AutorDTO)
+2026-02-18T19:56:52.326-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AutorDTO[id=null, nome=Geovane, dataNascimento=1920-01-22, nascionalidade=brasileiro]]
+2026-02-18T19:56:52.662-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/octet-stream', given [*/*] and supported [*/*]
+2026-02-18T19:56:52.664-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-02-18T19:58:38.693-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2026-02-18T19:58:38.694-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ParameterizableViewController [view="login"]
+2026-02-18T19:58:38.704-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:58:45.736-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/authorized?code=_Rh-_hQJaU_nFXGqYg_AM-fxoZU0_MeC_h3xPO964OFy_dMIWOsvTfwMwOb34i3sgVVbRRnKT_daZmwEn4Dp55aYNkaKnfA2oTei21xXks2PrqbXy8eWKY7P6fSy3B3H", parameters={masked}
+2026-02-18T19:58:45.738-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to oi.githubkaiocandido.libraryapi.controller.LoginController#getAuthorizationCode(String)
+2026-02-18T19:58:45.744-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [text/plain, */*, application/json, application/*+json, application/yaml]
+2026-02-18T19:58:45.745-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing ["seu authorization code _Rh-_hQJaU_nFXGqYg_AM-fxoZU0_MeC_h3xPO964OFy_dMIWOsvTfwMwOb34i3sgVVbRRnKT_daZ (truncated)..."]
+2026-02-18T19:58:45.748-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T19:59:18.144-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/autores", parameters={}
+2026-02-18T19:59:18.147-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to oi.githubkaiocandido.libraryapi.controller.AutorController#salvar(AutorDTO)
+2026-02-18T19:59:18.149-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AutorDTO[id=null, nome=Thiago, dataNascimento=2000-01-22, nascionalidade=brasileiro]]
+2026-02-18T19:59:18.267-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/octet-stream', given [*/*] and supported [*/*]
+2026-02-18T19:59:18.271-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-02-18T20:00:17.192-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/usuarios", parameters={}
+2026-02-18T20:00:17.198-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to oi.githubkaiocandido.libraryapi.controller.UsuarioController#salvar(UsuarioDto)
+2026-02-18T20:00:17.223-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [UsuarioDto[login=kaiopereira, email=user@example.com, password=12345, roles=[GERENTE]]]
+2026-02-18T20:00:17.931-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-02-18T20:01:16.723-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/livros/59b701f1-ce31-4a7c-b9cb-1b9837011f00", parameters={}
+2026-02-18T20:01:16.727-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to oi.githubkaiocandido.libraryapi.controller.LivroController#obterDetalhes(String)
+2026-02-18T20:01:17.450-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-02-18T20:01:17.534-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [PesquisaLivroDTO[id=59b701f1-ce31-4a7c-b9cb-1b9837011f00, isbn=978-1585424337, titulo=A casa mal ass (truncated)...]
+2026-02-18T20:01:17.652-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-02-18T20:01:30.288-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/livros/59b701f1-ce31-4a7c-b9cb-1b9837011", parameters={}
+2026-02-18T20:01:30.294-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to oi.githubkaiocandido.libraryapi.controller.LivroController#obterDetalhes(String)
+2026-02-18T20:01:30.320-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-02-18T20:01:30.321-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2026-02-18T20:01:30.323-03:00 DEBUG 4536 --- [libraryapi] [http-nio-54923-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
